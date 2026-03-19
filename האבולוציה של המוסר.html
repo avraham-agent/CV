@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תולדות המוסר האנושי – אבולוציה של תודעה וצדק</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Noto+Sans+Hebrew:wght@300;400;500;600;700&display=swap');
+:root{
+--bg:#faf8f4;--bg2:#f0ece3;--card:#fff;--text:#2c2420;--text2:#6b5f55;
+--gold:#b8860b;--goldL:#d4a017;--goldD:#8b6914;--bdr:rgba(139,105,20,.15);
+--sh:0 4px 18px rgba(0,0,0,.06);--shH:0 8px 28px rgba(0,0,0,.1);
+--c1:#c17817;--c1b:#fef6ec;
+--c2:#1a7a8a;--c2b:#edf7f9;
+--c3:#9b2d5e;--c3b:#fceef4;
+--c4:#5b3ea6;--c4b:#f3effc;
+--c5:#c4611a;--c5b:#fef4ec;
+--c6:#2b5aad;--c6b:#ecf1fc;
+--c7:#a62d6e;--c7b:#fceef6;
+--c8:#4a8a2d;--c8b:#f0f8ec;
+--c9:#2d7a3e;--c9b:#eef8f0;
+--cE:#cc3333;--cEb:#fcecea;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans Hebrew','Frank Ruhl Libre',serif;background:var(--bg);color:var(--text);line-height:1.9}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(160deg,#1a1510,#2c2218 40%,#3d2f1e 70%,#1a1510);color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0v80M0 40h80' stroke='%23b8860b' stroke-opacity='.04' stroke-width='.5'/%3E%3C/svg%3E")}
+.hero-p{position:absolute;inset:0;overflow:hidden}
+.pt{position:absolute;width:2px;height:2px;background:#d4a017;border-radius:50%;opacity:0;animation:fp 10s infinite}
+@keyframes fp{0%{opacity:0;transform:translateY(100vh) scale(0)}15%{opacity:.5}85%{opacity:.2}100%{opacity:0;transform:translateY(-5vh) scale(1.2)}}
+.hero-c{position:relative;z-index:2;max-width:850px;padding:2rem}
+.hero-icon{font-size:3.5rem;margin-bottom:.8rem;animation:gl 3s ease-in-out infinite}
+@keyframes gl{0%,100%{filter:drop-shadow(0 0 8px rgba(212,160,23,.3))}50%{filter:drop-shadow(0 0 25px rgba(212,160,23,.7))}}
+.hero h1{font-family:'Frank Ruhl Libre',serif;font-size:3rem;font-weight:900;color:#d4a017;text-shadow:0 0 40px rgba(212,160,23,.25);margin-bottom:.4rem}
+.hero-sub{font-size:1.2rem;color:#c0b8a0;margin-bottom:1rem;font-weight:300}
+.hero-line{width:100px;height:2px;background:linear-gradient(90deg,transparent,#d4a017,transparent);margin:1.2rem auto}
+.hero-desc{font-size:.95rem;color:#a09880;max-width:680px;margin:0 auto 1.5rem;line-height:2}
+.hero-thesis{background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.2);border-radius:12px;padding:1.3rem 1.8rem;margin:1.5rem auto;max-width:720px;font-style:italic;color:#e8d088}
+.hero-thesis .lb{font-weight:700;color:#d4a017;font-style:normal;display:block;margin-bottom:.4rem}
+.scroll-ind{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);animation:bn 2s ease-in-out infinite;color:#d4a017;font-size:1.3rem;cursor:pointer;z-index:2}
+@keyframes bn{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(12px)}}
+
+/* TOP NAV */
+.tnav{position:fixed;top:0;left:0;right:0;background:rgba(250,248,244,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);z-index:999;transform:translateY(-100%);transition:transform .3s;display:flex;align-items:center;padding:0 1.5rem;height:52px}
+.tnav.vis{transform:translateY(0)}
+.tnav-t{font-family:'Frank Ruhl Libre',serif;color:var(--gold);font-weight:700;font-size:.9rem;margin-left:1.5rem;white-space:nowrap}
+.tnav-ls{display:flex;gap:3px;overflow-x:auto;padding:0 .8rem;flex:1}
+.tnav-l{padding:5px 10px;font-size:.68rem;color:var(--text2);text-decoration:none;border-radius:16px;white-space:nowrap;transition:all .3s;border:1px solid transparent}
+.tnav-l:hover,.tnav-l.act{color:var(--gold);border-color:var(--bdr);background:rgba(184,134,11,.06)}
+.tbl-btn{background:rgba(184,134,11,.1);color:var(--gold);border:1px solid var(--bdr);padding:5px 12px;border-radius:16px;cursor:pointer;font-size:.7rem;font-family:inherit;white-space:nowrap;transition:all .3s}
+.tbl-btn:hover{background:rgba(184,134,11,.2)}
+
+/* FLOAT NAV */
+.fnav{position:fixed;top:50%;left:12px;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;gap:6px;transition:opacity .3s}
+.fnav.hid{opacity:0;pointer-events:none}
+.nd{width:12px;height:12px;border-radius:50%;border:2px solid var(--gold);background:transparent;cursor:pointer;transition:all .3s;position:relative}
+.nd:hover,.nd.act{background:var(--gold);box-shadow:0 0 8px rgba(184,134,11,.4)}
+.nd .tt{position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);background:#fff;color:var(--text);padding:4px 10px;border-radius:6px;font-size:.7rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s;border:1px solid var(--bdr);box-shadow:var(--sh)}
+.nd:hover .tt{opacity:1}
+
+/* PENDULUM */
+.pend{padding:3rem 2rem;text-align:center;background:var(--bg2);border-bottom:1px solid var(--bdr)}
+.pend h2{font-family:'Frank Ruhl Libre',serif;font-size:1.6rem;color:var(--gold);margin-bottom:.8rem}
+.pend-d{color:var(--text2);max-width:580px;margin:0 auto 1.5rem;font-size:.9rem}
+.pend-box{max-width:900px;margin:0 auto;position:relative;height:100px}
+.pend-track{position:absolute;top:50%;left:8%;right:8%;height:3px;background:linear-gradient(90deg,var(--c1),var(--c6),var(--cE));border-radius:2px}
+.pend-ball{position:absolute;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;background:var(--gold);border-radius:50%;box-shadow:0 0 15px rgba(184,134,11,.5);animation:sw 6s ease-in-out infinite}
+@keyframes sw{0%,100%{left:12%}50%{left:88%}}
+.pend-poles{display:flex;justify-content:space-between;max-width:900px;margin:0 auto}
+.pend-pole{text-align:center}
+.pend-pole b{font-size:1rem}
+.pend-pole small{font-size:.75rem;color:var(--text2);display:block;max-width:160px}
+
+/* TIMELINE */
+.tl{max-width:1100px;margin:0 auto;padding:3rem 2rem;position:relative}
+.tl-line{position:absolute;right:45px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--c1) 3%,var(--c2) 14%,var(--c3) 25%,var(--c4) 36%,var(--c5) 47%,var(--c6) 58%,var(--c7) 69%,var(--c8) 80%,var(--c9) 90%,var(--cE) 97%,transparent)}
+
+/* ERA */
+.era{margin-bottom:4rem;position:relative;padding-right:80px;opacity:0;transform:translateY(35px);transition:all .7s ease-out}
+.era.vis{opacity:1;transform:translateY(0)}
+.era-dot{position:absolute;right:36px;top:25px;width:20px;height:20px;border-radius:50%;border:3px solid;background:var(--bg);z-index:2;display:flex;align-items:center;justify-content:center}
+.era-dot i{width:8px;height:8px;border-radius:50%;display:block}
+.era-hdr{display:flex;align-items:flex-start;gap:1.3rem;margin-bottom:1.2rem}
+.era-img{width:110px;height:110px;border-radius:10px;overflow:hidden;flex-shrink:0;border:2px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:3rem;background:#fff}
+.era-img img{width:100%;height:100%;object-fit:cover}
+.era-per{font-size:.82rem;color:var(--text2);margin-bottom:.2rem;font-weight:500}
+.era-ttl{font-family:'Frank Ruhl Libre',serif;font-size:1.8rem;font-weight:700;margin-bottom:.4rem;line-height:1.3}
+.era-par{font-size:.82rem;padding:.4rem .9rem;border-radius:6px;display:inline-block;font-weight:500;border:1px solid}
+.era-ev{background:var(--card);border-radius:10px;padding:1rem 1.3rem;margin-bottom:1.2rem;border:1px solid var(--bdr);box-shadow:var(--sh)}
+.era-ev b{font-weight:700;color:var(--gold);margin-bottom:.4rem;font-size:.85rem;display:block}
+.era-ev p{font-size:.85rem;color:var(--text2);line-height:1.8}
+.era-intro{background:var(--card);border-radius:10px;padding:1.1rem 1.4rem;margin-bottom:1.2rem;border:1px solid var(--bdr);box-shadow:var(--sh);font-size:.88rem;color:var(--text2);line-height:1.9}
+
+/* STREAMS */
+.str{background:var(--card);border-radius:10px;margin-bottom:1rem;border:1px solid var(--bdr);overflow:hidden;transition:all .3s;box-shadow:var(--sh)}
+.str:hover{box-shadow:var(--shH)}
+.str-h{padding:.9rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .3s}
+.str-h:hover{background:var(--bg2)}
+.str-n{font-weight:700;font-size:1rem}
+.str-a{transition:transform .3s;color:var(--gold);font-size:1.1rem}
+.str.op .str-a{transform:rotate(180deg)}
+.str-c{max-height:0;overflow:hidden;transition:max-height .5s ease-out}
+.str.op .str-c{max-height:9000px}
+.str-b{padding:0 1.3rem 1.3rem}
+.str-d{color:var(--text2);font-size:.87rem;margin-bottom:1rem;line-height:1.9}
+
+/* THINKER CARDS */
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.9rem}
+.tc{background:var(--bg);border:1px solid var(--bdr);border-radius:10px;padding:1.1rem;cursor:pointer;transition:all .3s}
+.tc:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--shH)}
+.tc-top{display:flex;align-items:center;gap:.9rem;margin-bottom:.7rem}
+.tc-av{width:55px;height:55px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;border:2px solid;background:#f5f0e8}
+.tc-av img{width:100%;height:100%;object-fit:cover}
+.tc-nm{font-weight:700;font-size:1rem}
+.tc-dt{font-size:.72rem;color:var(--text2)}
+.tc-bio{font-size:.8rem;color:var(--text2);margin-bottom:.7rem;line-height:1.7}
+.tc-pts{list-style:none;padding:0}
+.tc-pts li{font-size:.8rem;padding:.25rem 0 .25rem 0;padding-right:1.1rem;position:relative;line-height:1.6}
+.tc-pts li::before{content:'◆';position:absolute;right:0;font-size:.45rem;top:.5rem}
+.tc-btn{display:inline-block;margin-top:.7rem;padding:.35rem .9rem;font-size:.75rem;border-radius:16px;border:1px solid var(--gold);color:var(--gold);background:transparent;cursor:pointer;transition:all .3s;font-family:inherit}
+.tc-btn:hover{background:var(--gold);color:#fff}
+
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;justify-content:center;align-items:center;padding:1.5rem;overflow-y:auto}
+.mo.act{display:flex}
+.ml{background:#fff;border:1px solid var(--bdr);border-radius:14px;max-width:780px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:mIn .35s ease-out;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+@keyframes mIn{from{opacity:0;transform:scale(.95) translateY(15px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.ml-hdr{padding:1.8rem 1.8rem 1rem;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:1.3rem;position:sticky;top:0;background:#fff;z-index:1}
+.ml-av{width:75px;height:75px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:2.2rem;flex-shrink:0;border:3px solid;background:#f5f0e8}
+.ml-av img{width:100%;height:100%;object-fit:cover}
+.ml-nm{font-family:'Frank Ruhl Libre',serif;font-size:1.6rem;font-weight:700}
+.ml-dt{font-size:.82rem;color:var(--text2)}
+.ml-x{position:absolute;top:.8rem;left:.8rem;background:var(--bg2);border:none;color:var(--text);font-size:1.3rem;width:36px;height:36px;border-radius:50%;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center}
+.ml-x:hover{background:var(--bdr)}
+.ml-body{padding:1.8rem}
+.ml-sec{margin-bottom:1.8rem}
+.ml-sec h3{font-weight:700;color:var(--gold);font-size:1rem;margin-bottom:.6rem;padding-bottom:.25rem;border-bottom:1px solid var(--bdr)}
+.ml-sec p,.ml-sec li{color:var(--text2);line-height:2;font-size:.9rem}
+.ml-sec ul{list-style:none;padding:0}
+.ml-sec ul li{padding:.35rem 0;padding-right:1.3rem;position:relative}
+.ml-sec ul li::before{content:'▸';position:absolute;right:0;color:var(--gold)}
+.ml-q{background:rgba(184,134,11,.06);border-right:3px solid var(--gold);padding:.9rem 1.3rem;margin:.8rem 0;border-radius:0 8px 8px 0;font-style:italic;color:var(--goldD)}
+
+/* EPILOGUE */
+.epi{background:var(--cEb);border-top:2px solid var(--cE);padding:3rem 2rem}
+.epi-c{max-width:1000px;margin:0 auto}
+.epi-badge{display:inline-block;background:rgba(204,51,51,.1);color:var(--cE);padding:.35rem 1rem;border-radius:16px;font-size:.82rem;font-weight:700;margin-bottom:1.2rem;border:1px solid rgba(204,51,51,.2)}
+.epi-t{font-family:'Frank Ruhl Libre',serif;font-size:1.9rem;font-weight:700;color:var(--cE);margin-bottom:.8rem}
+.ctbl{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.82rem}
+.ctbl th{background:rgba(204,51,51,.08);color:var(--cE);padding:.7rem .9rem;text-align:right;font-weight:700;border:1px solid rgba(204,51,51,.15)}
+.ctbl td{padding:.7rem .9rem;border:1px solid var(--bdr);color:var(--text2);vertical-align:top}
+
+/* CONCLUSION */
+.conc{padding:3rem 2rem;text-align:center;background:var(--bg2)}
+.conc-c{max-width:680px;margin:0 auto}
+.conc h2{font-family:'Frank Ruhl Libre',serif;font-size:1.6rem;color:var(--gold);margin-bottom:1.2rem}
+.dia-f{display:flex;align-items:center;justify-content:center;gap:.8rem;margin:1.5rem 0;flex-wrap:wrap}
+.dia-b{padding:.8rem 1.2rem;border-radius:8px;border:1px solid;text-align:center;min-width:150px;background:#fff}
+.dia-b b{font-size:.95rem;display:block;margin-bottom:.2rem}
+.dia-b small{font-size:.75rem;color:var(--text2)}
+.dia-a{font-size:1.3rem;color:var(--gold)}
+
+/* SUMMARY */
+.sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:3000;overflow-y:auto;padding:1.5rem}
+.sov.act{display:block}
+.sov-c{max-width:1200px;margin:0 auto;background:#fff;border-radius:14px;padding:1.8rem;border:1px solid var(--bdr);box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.sov-x{float:left;background:var(--bg2);border:none;color:var(--text);font-size:1.3rem;width:36px;height:36px;border-radius:50%;cursor:pointer}
+.stbl{width:100%;border-collapse:collapse;margin-top:1.2rem;font-size:.78rem}
+.stbl th{background:rgba(184,134,11,.08);color:var(--gold);padding:.6rem;text-align:right;border:1px solid var(--bdr);font-weight:700}
+.stbl td{padding:.6rem;border:1px solid var(--bdr);color:var(--text2);vertical-align:top;line-height:1.7}
+.stbl tr:hover td{background:rgba(184,134,11,.03)}
+
+.footer{text-align:center;padding:1.5rem;border-top:1px solid var(--bdr);color:var(--text2);font-size:.78rem;background:var(--bg2)}
+@media(max-width:768px){.hero h1{font-size:1.9rem}.era-hdr{flex-direction:column}.era-img{width:80px;height:80px;font-size:2.2rem}.era-ttl{font-size:1.4rem}.era{padding-right:55px}.tl-line{right:26px}.era-dot{right:17px}.tg{grid-template-columns:1fr}.fnav{display:none}.ml-hdr{flex-direction:column;text-align:center}.tnav-ls{display:none}.dia-f{flex-direction:column}.dia-a{transform:rotate(90deg)}}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="tnav" id="tnav">
+<span class="tnav-t">⚖️ תולדות המוסר האנושי</span>
+<div class="tnav-ls">
+<a href="#e1" class="tnav-l">העת העתיקה</a>
+<a href="#e2" class="tnav-l">עידן הצירים</a>
+<a href="#e3" class="tnav-l">שלהי העת העתיקה</a>
+<a href="#e4" class="tnav-l">ימי הביניים</a>
+<a href="#e5" class="tnav-l">רנסנס ומאה 17</a>
+<a href="#e6" class="tnav-l">הנאורות</a>
+<a href="#e7" class="tnav-l">המאה ה-19</a>
+<a href="#e8" class="tnav-l">המאה ה-20</a>
+<a href="#e9" class="tnav-l">המאה ה-21</a>
+<a href="#epi" class="tnav-l">אפילוג</a>
+</div>
+<button class="tbl-btn" onclick="toggleS()">📊 טבלה מסכמת</button>
+</nav>
+
+<!-- FLOAT NAV -->
+<div class="fnav hid" id="fnav">
+<div class="nd" data-t="e1" style="border-color:var(--c1)"><span class="tt">העת העתיקה</span></div>
+<div class="nd" data-t="e2" style="border-color:var(--c2)"><span class="tt">עידן הצירים</span></div>
+<div class="nd" data-t="e3" style="border-color:var(--c3)"><span class="tt">שלהי העת העתיקה</span></div>
+<div class="nd" data-t="e4" style="border-color:var(--c4)"><span class="tt">ימי הביניים</span></div>
+<div class="nd" data-t="e5" style="border-color:var(--c5)"><span class="tt">רנסנס</span></div>
+<div class="nd" data-t="e6" style="border-color:var(--c6)"><span class="tt">הנאורות</span></div>
+<div class="nd" data-t="e7" style="border-color:var(--c7)"><span class="tt">המאה ה-19</span></div>
+<div class="nd" data-t="e8" style="border-color:var(--c8)"><span class="tt">המאה ה-20</span></div>
+<div class="nd" data-t="e9" style="border-color:var(--c9)"><span class="tt">המאה ה-21</span></div>
+<div class="nd" data-t="epi" style="border-color:var(--cE)"><span class="tt">אפילוג</span></div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<div class="hero-p" id="pts"></div>
+<div class="hero-c">
+<div class="hero-icon">⚖️</div>
+<h1>תולדות המוסר האנושי</h1>
+<p class="hero-sub">אבולוציה של תודעה וצדק</p>
+<div class="hero-line"></div>
+<p class="hero-desc">מסע אינטלקטואלי דרך 5,000 שנות מחשבה מוסרית – ממסופוטמיה ועד לבינה המלאכותית. מהפחד מכאוס ועד לאחריות טכנולוגית.</p>
+<div class="hero-thesis">
+<span class="lb">📜 התזה המרכזית</span>
+ההיסטוריה של המוסר נעה בתנועת מטוטלת בין <strong>הטרונומיה</strong> (מוסר מוכתב מבחוץ) לבין <strong>אוטונומיה</strong> (מוסר הנובע מהסובייקט התבוני). המאה ה-21 מאיימת לפרק את הדיכוטומיה הזו באמצעות טשטוש גבולות הסובייקט האנושי.
+</div>
+</div>
+<div class="scroll-ind" onclick="document.getElementById('pend').scrollIntoView({behavior:'smooth'})">▼</div>
+</section>
+
+<!-- PENDULUM -->
+<section class="pend" id="pend">
+<h2>תנועת המטוטלת: הטרונומיה ↔ אוטונומיה</h2>
+<p class="pend-d">לאורך ההיסטוריה, מקור הסמכות המוסרית נודד בין כוח חיצוני לבין התבונה הפנימית.</p>
+<div class="pend-poles">
+<div class="pend-pole"><b style="color:var(--c1)">🏛️ הטרונומיה</b><small>אל, טבע, חוק, אלגוריתם</small></div>
+<div class="pend-pole"><b style="color:var(--c6)">🧠 אוטונומיה</b><small>תבונת הסובייקט ובחירתו</small></div>
+</div>
+<div class="pend-box"><div class="pend-track"></div><div class="pend-ball"></div></div>
+</section>
+
+<!-- TIMELINE -->
+<div class="tl" id="tl">
+<div class="tl-line"></div>
+
+<!-- ========== ERA 1: ANCIENT WORLD ========== -->
+<section class="era" id="e1">
+<div class="era-dot" style="border-color:var(--c1)"><i style="background:var(--c1)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c1)">🏺</div>
+<div>
+<div class="era-per">אלף 3 – 600 לפנה"ס</div>
+<h2 class="era-ttl" style="color:var(--c1)">פרק א': העת העתיקה – יסודות הצדק והסדר</h2>
+<span class="era-par" style="color:var(--c1);border-color:var(--c1);background:var(--c1b)">סדר מפני כאוס · ברית וצדק · דואליזם מוסרי</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>המהפכה החקלאית · המדינות הראשונות · המצאת הכתב · בניית הפירמידות · יציאת מצרים · מתן תורה · ממלכת ישראל · תקופת הנביאים · האימפריה הפרסית</p></div>
+<div class="era-intro">תקופה זו מכילה <strong>ארבע מסורות מוסריות מקבילות</strong> שהתפתחו בו-זמנית. כל אחת הציעה תשובה שונה לשאלות היסוד: מהו הטוב? ממה נובע הסדר? ומה מקום האדם? ההבדלים קשורים עמוקות <strong>לגיאוגרפיה ולאקלים</strong>.</div>
+
+<!-- Mesopotamia -->
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c1)">🏛️ מסופוטמיה: הסדר האלוהי והפחד מהכאוס</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d"><strong>הקשר גיאוגרפי:</strong> ארץ של אקלים אלים – הצפות בלתי צפויות יצרו תפיסת עולם פסימית. האלים קפריזיים, והאדם נוצר לשרתם. המוסר הוא <strong>חוזי-תועלתני</strong>: לא "טוב" מופשט, אלא שימור הסדר.</p>
+<div class="tg">
+<div class="tc" onclick="openM('hammurabi')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Milkau_Oberer_Teil_der_Stele_mit_dem_Text_von_Hammurapis_Gesetzescode_369-2.jpg/220px-Milkau_Oberer_Teil_der_Stele_mit_dem_Text_von_Hammurapis_Gesetzescode_369-2.jpg" alt="חמורבי" onerror="this.onerror=null;this.parentElement.innerHTML='👑'"></div><div><div class="tc-nm">חמורבי</div><div class="tc-dt">~1792-1750 לפנה"ס · בבל</div></div></div>
+<p class="tc-bio">מלך בבל שאיחד את האזור. 282 חוקים חרוטים על סטלת בזלת.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">"עין תחת עין" – הגבלת הנקמה</li><li style="color:var(--c1)">היררכיה מעמדית: ערך החיים תלוי במעמד</li><li style="color:var(--c1)">החוק כמכשיר פוליטי מטעם האל שמש</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<!-- Egypt -->
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c1)">🏺 מצרים: הרמוניה ונצח – המאע'ת</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d"><strong>הקשר גיאוגרפי:</strong> הנילוס צפוי ומדויק, המדבר הגן. המצרים חשו ביטחון ונצחיות. המוסר <strong>אסתטי ואונטולוגי</strong> – הרמוניה, אמת, צדק וסדר קוסמי.</p>
+<div class="tg">
+<div class="tc" onclick="openM('maat')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Maat.svg/220px-Maat.svg.png" alt="מאע'ת" onerror="this.onerror=null;this.parentElement.innerHTML='🪶'"></div><div><div class="tc-nm">ספר המתים והמאע'ת</div><div class="tc-dt">~1550-50 לפנה"ס · מצרים</div></div></div>
+<p class="tc-bio">המאע'ת = הסטרוקטורה של היקום. חטא = פגיעה במרקם המציאות.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">הוידוי השלילי: 42 הצהרות "לא עשיתי"</li><li style="color:var(--c1)">שקילת הלב מול נוצת המאע'ת</li><li style="color:var(--c1)">המוסר כתנאי לחיי נצח</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<!-- BIBLE -->
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c1)">✡️ המסורת המקראית: מוסר אבסולוטי של ברית</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d"><strong>במקביל</strong> למסופוטמיה ומצרים, התנ"ך מביא חידוש רדיקלי: האל אינו חלק מהטבע, לכן המוסר אינו כפוף לכוח. מול חוקי חמורבי שהגנו על <em>החזקים</em>, תורת משה מגנה על <em>החלש</em>. הנביאים (מאה 8-6, במקביל לעידן הצירים) השלימו: <strong>מוסר מעל פולחן</strong>.</p>
+<div class="tg">
+<div class="tc" onclick="openM('abraham')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)">🌟</div><div><div class="tc-nm">אברהם אבינו</div><div class="tc-dt">~1800 לפנה"ס · <em>בן דורו של חמורבי</em></div></div></div>
+<p class="tc-bio">הראשון שמנהל דיאלוג מוסרי עם האל – הוויכוח על סדום.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">"השופט כל הארץ לא יעשה משפט?" – לידת המצפון</li><li style="color:var(--c1)">ברית = מערכת דו-צדדית, לא כניעה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('moses')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_WGA19289.jpg/220px-Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_WGA19289.jpg" alt="משה" onerror="this.onerror=null;this.parentElement.innerHTML='⛰️'"></div><div><div class="tc-nm">משה רבנו</div><div class="tc-dt">~1300 לפנה"ס</div></div></div>
+<p class="tc-bio">מנהיג ומחוקק. עשרת הדברות. הגנה על הגר, היתום והאלמנה.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">ציוויים מוחלטים ואוניברסליים</li><li style="color:var(--c1)">"בצלם אלוהים" – שוויון מהותי</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('prophets')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)">📢</div><div><div class="tc-nm">נביאי ישראל</div><div class="tc-dt">מאה 8-6 לפנה"ס · <em>במקביל לעידן הצירים</em></div></div></div>
+<p class="tc-bio">"שנאתי מאסתי חגיכם" (עמוס). ביקורת חברתית רדיקלית בשם האל.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">צדק > קורבנות ופולחן</li><li style="color:var(--c1)">חזון: "וכתתו חרבותם לאתים"</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<!-- Zoroaster -->
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c1)">🔥 פרס: זרתוסטרא – לידת הדואליזם</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">אבי הדואליזם המוסרי. חצה את העולם לשניים: טוב ורע. האדם = לשון המאזניים בקרב הקוסמי. השפעה עצומה על יהדות, נצרות ואסלאם.</p>
+<div class="tg">
+<div class="tc" onclick="openM('zarathustra')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c1)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Faravahar.svg/220px-Faravahar.svg.png" alt="זרתוסטרא" onerror="this.onerror=null;this.parentElement.innerHTML='🔥'"></div><div><div class="tc-nm">זרתוסטרא</div><div class="tc-dt">מאה 10-6 לפנה"ס · פרס</div></div></div>
+<p class="tc-bio">נביא פרסי. הפך את האדם משרת האלים לשותף במאבק.</p>
+<ul class="tc-pts"><li style="color:var(--c1)">מחשבה טובה, דיבור טוב, מעשה טוב</li><li style="color:var(--c1)">בחירה חופשית אקטיבית</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 2: AXIAL AGE ========== -->
+<section class="era" id="e2">
+<div class="era-dot" style="border-color:var(--c2)"><i style="background:var(--c2)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c2)">🏛️</div>
+<div>
+<div class="era-per">800 – 200 לפנה"ס</div>
+<h2 class="era-ttl" style="color:var(--c2)">פרק ב': עידן הצירים – גילוי התודעה והפנימיות</h2>
+<span class="era-par" style="color:var(--c2);border-color:var(--c2);background:var(--c2b)">אתיקה של מידות · עיצוב האופי · תודעה וחמלה</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>הפוליס היוונית · הדמוקרטיה · עליית פרס · בודהא וקונפוציוס · הבהגווד גיטה · <em>נביאי ישראל פועלים במקביל (ראו פרק א')</em></p></div>
+
+<!-- Greece -->
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c2)">🏛️ יוון: ממיתוס ללוגוס</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">מעבר ממוסר של גיבורים (הומרוס – כוח וכבוד) למוסר של אזרחים (פילוסופיה). "האדם הוא מידת כל הדברים".</p>
+<div class="tg">
+<div class="tc" onclick="openM('socrates')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Socrate_du_Louvre.jpg/220px-Socrate_du_Louvre.jpg" alt="סוקרטס" onerror="this.onerror=null;this.parentElement.innerHTML='🗣️'"></div><div><div class="tc-nm">סוקרטס</div><div class="tc-dt">470-399 לפנה"ס · אתונה</div></div></div>
+<p class="tc-bio">אבי הפילוסופיה. לא כתב מילה. שיטתו: שאילת שאלות עד חשיפת הבורות. הוצא להורג.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">"דע את עצמך" – חקירה עצמית כבסיס</li><li style="color:var(--c2)">המידה הטובה = ידע; הרוע = בורות</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('plato')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/220px-Plato_Silanion_Musei_Capitolini_MC1377.jpg" alt="אפלטון" onerror="this.onerror=null;this.parentElement.innerHTML='🏛️'"></div><div><div class="tc-nm">אפלטון</div><div class="tc-dt">428-348 לפנה"ס · אתונה</div></div></div>
+<p class="tc-bio">מייסד האקדמיה. תורת האידיאות. הצדק כהרמוניה פנימית של הנפש.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">משל המערה – הפילוסוף רואה אמת</li><li style="color:var(--c2)">הנפש: תבונה, עוז, תאווה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('aristotle')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/220px-Aristotle_Altemps_Inv8575.jpg" alt="אריסטו" onerror="this.onerror=null;this.parentElement.innerHTML='📚'"></div><div><div class="tc-nm">אריסטו</div><div class="tc-dt">384-322 לפנה"ס · סטאגירה</div></div></div>
+<p class="tc-bio">אמפיריציסט. אתיקת המידות – שביל הזהב. המוסר כהרגל ותרגול.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">האמצע הזהוב בין קיצונות</li><li style="color:var(--c2)">אאודימוניה – שגשוג כתכלית</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<!-- China -->
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c2)">☯️ סין: המחלוקת על טבע האדם</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">הפולמוס היסודי: האם טבע האדם טוב או רע?</p>
+<div class="tg">
+<div class="tc" onclick="openM('confucius')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Konfuzius-1770.jpg/220px-Konfuzius-1770.jpg" alt="קונפוציוס" onerror="this.onerror=null;this.parentElement.innerHTML='☯️'"></div><div><div class="tc-nm">קונפוציוס</div><div class="tc-dt">551-479 לפנה"ס · סין</div></div></div>
+<p class="tc-bio">מוסר רלציוני. ה"אני" מוגדר ביחסי חובה.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">ז'ן (רחמים) + לי (טקסים)</li><li style="color:var(--c2)">חמשת היחסים – אין "אני" עצמאי</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('mencius')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Mencius.jpg/220px-Mencius.jpg" alt="מנציוס" onerror="this.onerror=null;this.parentElement.innerHTML='🌱'"></div><div><div class="tc-nm">מנציוס</div><div class="tc-dt">372-289 לפנה"ס · סין</div></div></div>
+<p class="tc-bio">אופטימיסט: טבע האדם טוב כמו מים שזורמים למטה.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">ארבע נטיות מולדות לטוב</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('xunzi')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)">⚒️</div><div><div class="tc-nm">שו'ן דזה</div><div class="tc-dt">310-235 לפנה"ס · סין</div></div></div>
+<p class="tc-bio">פסימיסט: טבע האדם רע. מוסר = יישור עץ עקום.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">מוסדות ומנגנונים חיצוניים הכרחיים</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<!-- India -->
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c2)">☸️ הודו: דהרמה, קארמה ושחרור מסבל</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">המזרח הציע אלטרנטיבה: לא חוק חיצוני אלא תובנה פנימית – תודעה וחוק סיבתיות.</p>
+<div class="tg">
+<div class="tc" onclick="openM('gita')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Bhagavad_Gita%2C_19th_century.jpg/220px-Bhagavad_Gita%2C_19th_century.jpg" alt="גיטה" onerror="this.onerror=null;this.parentElement.innerHTML='🙏'"></div><div><div class="tc-nm">הבהגווד גיטה</div><div class="tc-dt">מאה 5-2 לפנה"ס · הודו</div></div></div>
+<p class="tc-bio">פעולה מתוך חובה (דהרמה) ללא תשוקה לתוצאות. ביטול האגו.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">"אתה זכאי לעבודה, לא לפירותיה"</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('buddha')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c2)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg/220px-Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg" alt="בודהא" onerror="this.onerror=null;this.parentElement.innerHTML='☸️'"></div><div><div class="tc-nm">בודהא</div><div class="tc-dt">~563-483 לפנה"ס · הודו</div></div></div>
+<p class="tc-bio">המוסר כרפואה לסבל. ארבע אמיתות אצילות. חמלה.</p>
+<ul class="tc-pts"><li style="color:var(--c2)">הסבל = השתוקקות. הפתרון = נירוונה</li><li style="color:var(--c2)">אין "אני" נפרד – פגיעה באחר = עצמית</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 3: LATE ANTIQUITY ========== -->
+<section class="era" id="e3">
+<div class="era-dot" style="border-color:var(--c3)"><i style="background:var(--c3)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c3)">✝️</div>
+<div>
+<div class="era-per">200 לפנה"ס – 600 לספירה</div>
+<h2 class="era-ttl" style="color:var(--c3)">פרק ג': שלהי העת העתיקה – המהפכה המונותאיסטית</h2>
+<span class="era-par" style="color:var(--c3);border-color:var(--c3);background:var(--c3b)">תלות בחסד האל · הלכה · חוק דתי</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>חורבן בית שני · נפילת רומא · עליית הנצרות · היווצרות התלמוד · הסטואה הרומית</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c3)">✡️ היהדות החז"לית: קידוש המחלוקת</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">מעבר ממוסר נבואי (אמת אחת) למוסר הלכתי (ריבוי אמיתות). <strong>"לא בשמים היא"</strong> – תנורו של עכנאי: אלוהים מנושל מסמכותו. תגובת האל: "נצחוני בניי!"</p>
+<div class="tg">
+<div class="tc" onclick="openM('chazal')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c3)">📖</div><div><div class="tc-nm">חכמי התלמוד (חז"ל)</div><div class="tc-dt">200 לפנה"ס - 500 לספירה</div></div></div>
+<p class="tc-bio">"אלו ואלו דברי אלוהים חיים". פלורליזם מוסרי כערך.</p>
+<ul class="tc-pts"><li style="color:var(--c3)">"לא בשמים היא" – האדם מפרש</li><li style="color:var(--c3)">יצר הרע כמנוע – אנרגיה שיש לכוון</li><li style="color:var(--c3)">מחלוקת לשם שמים</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c3)">✝️ הנצרות: אוגוסטינוס – החטא הקדמון</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">פסימיזם אנתרופולוגי: הרצון פגום. המוסר = תלות מוחלטת בחסד האל.</p>
+<div class="tg">
+<div class="tc" onclick="openM('augustine')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c3)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/220px-Saint_Augustine_by_Philippe_de_Champaigne.jpg" alt="אוגוסטינוס" onerror="this.onerror=null;this.parentElement.innerHTML='⛪'"></div><div><div class="tc-nm">אוגוסטינוס</div><div class="tc-dt">354-430 · היפו</div></div></div>
+<p class="tc-bio">"הוידויים", "עיר האלוהים". עבר מהוללות לנצרות.</p>
+<ul class="tc-pts"><li style="color:var(--c3)">החטא הקדמון – טבע אנושי פגום</li><li style="color:var(--c3)">חסד אלוהי כתנאי יחיד לגאולה</li><li style="color:var(--c3)">שתי ערים – עיר האל מול עיר האדם</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c3)">☪️ האסלאם: צדק מול רצון</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">הוויכוח: האם הטוב אובייקטיבי (מועתזילה) או שרצון האל קובע (אשעריה)?</p>
+<div class="tg">
+<div class="tc" onclick="openM('alghazali')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c3)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Al-Ghazali.png/220px-Al-Ghazali.png" alt="אל-גזאלי" onerror="this.onerror=null;this.parentElement.innerHTML='🕌'"></div><div><div class="tc-nm">אל-גזאלי</div><div class="tc-dt">1058-1111 · פרס</div></div></div>
+<p class="tc-bio">וולונטריזם: הטוב = רצון האל בלבד. הרס הפילוסופיה הרציונלית.</p>
+<ul class="tc-pts"><li style="color:var(--c3)">אין "מוסר טבעי" – המוסר = כניעה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 4: MIDDLE AGES ========== -->
+<section class="era" id="e4">
+<div class="era-dot" style="border-color:var(--c4)"><i style="background:var(--c4)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c4)">📜</div>
+<div>
+<div class="era-per">800 – 1400</div>
+<h2 class="era-ttl" style="color:var(--c4)">פרק ד': ימי הביניים – הסינתזה הסכולסטית</h2>
+<span class="era-par" style="color:var(--c4);border-color:var(--c4);background:var(--c4b)">סינתזת אמונה ותבונה · חוק הטבע</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>תור הזהב האסלאמי · מסעי צלב · אוניברסיטאות · תרגום אריסטו · זן בודהיזם</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c4)">📜 הפרויקט הגדול: הוכחה שאין סתירה בין אריסטו לתנ"ך</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('rambam')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c4)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Maimonides-2.jpg/220px-Maimonides-2.jpg" alt="רמב״ם" onerror="this.onerror=null;this.parentElement.innerHTML='✡️'"></div><div><div class="tc-nm">הרמב"ם</div><div class="tc-dt">1138-1204 · קורדובה → מצרים</div></div></div>
+<p class="tc-bio">"מורה הנבוכים", "משנה תורה". רציונליסט גדול. תכלית המוסר = ידיעת האל.</p>
+<ul class="tc-pts"><li style="color:var(--c4)">המצוות ככלים רציונליים</li><li style="color:var(--c4)">דרך האמצע (אריסטו + תורה)</li><li style="color:var(--c4)">8 דרגות הצדקה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('aquinas')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c4)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/St-thomas-aquinas.jpg/220px-St-thomas-aquinas.jpg" alt="אקווינס" onerror="this.onerror=null;this.parentElement.innerHTML='⛪'"></div><div><div class="tc-nm">תומאס אקווינס</div><div class="tc-dt">1225-1274 · איטליה</div></div></div>
+<p class="tc-bio">"סומה תאולוגית". דוקטרינת חוק הטבע. גם כופר יכול להיות מוסרי.</p>
+<ul class="tc-pts"><li style="color:var(--c4)">4 שכבות חוק: נצחי, טבעי, אנושי, אלוהי</li><li style="color:var(--c4)">"החסד משלים את הטבע"</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<!-- ========== ERA 5: RENAISSANCE & 17TH ========== -->
+<section class="era" id="e5">
+<div class="era-dot" style="border-color:var(--c5)"><i style="background:var(--c5)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c5)">🎨</div>
+<div>
+<div class="era-per">1400 – 1650</div>
+<h2 class="era-ttl" style="color:var(--c5)">פרק ה': רנסנס והמאה ה-17 – כוח ותבונה</h2>
+<span class="era-par" style="color:var(--c5);border-color:var(--c5);background:var(--c5b)">הומניזם · ריאליזם פוליטי · ספק שיטתי</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>הדפוס · גילוי אמריקה · הרפורמציה · המהפכה המדעית · עליית המדינה הלאומית</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c5)">⚔️ פוליטיקה, ספק ורציונליזם</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">הרנסנס מחזיר את האדם למרכז – לא כיצור שמימי, אלא כפועל פוליטי. הספק השיטתי מוליד חשיבה חדשה על מוסר.</p>
+<div class="tg">
+<div class="tc" onclick="openM('machiavelli')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c5)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/220px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg" alt="מקיאבלי" onerror="this.onerror=null;this.parentElement.innerHTML='🦊'"></div><div><div class="tc-nm">מקיאבלי</div><div class="tc-dt">1469-1527 · פירנצה</div></div></div>
+<p class="tc-bio">"הנסיך". הפריד מוסר פרטי מציבורי. "שועל ואריה".</p>
+<ul class="tc-pts"><li style="color:var(--c5)">התוצאה מקדשת את האמצעים</li><li style="color:var(--c5)">ריאליזם: "כיצד חיים" ≠ "כיצד צריכים"</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('descartes')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c5)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/220px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg" alt="דקארט" onerror="this.onerror=null;this.parentElement.innerHTML='🤔'"></div><div><div class="tc-nm">רנה דקארט</div><div class="tc-dt">1596-1650 · צרפת</div></div></div>
+<p class="tc-bio">"אני חושב, משמע אני קיים". ספק שיטתי. "מוסר זמני" ונדיבות.</p>
+<ul class="tc-pts"><li style="color:var(--c5)">ספק שיטתי כבסיס לוודאות</li><li style="color:var(--c5)">Générosité – תודעת חירות וכבוד עצמי</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('hobbes')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c5)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Hobbes_%28portrait%29.jpg/220px-Thomas_Hobbes_%28portrait%29.jpg" alt="הובס" onerror="this.onerror=null;this.parentElement.innerHTML='🐺'"></div><div><div class="tc-nm">תומאס הובס</div><div class="tc-dt">1588-1679 · אנגליה</div></div></div>
+<p class="tc-bio">"לוויתן". מצב הטבע = מלחמת הכל בכל. מוסר = אמנה חברתית.</p>
+<ul class="tc-pts"><li style="color:var(--c5)">"אדם לאדם זאב"</li><li style="color:var(--c5)">ויתור על חירות תמורת ביטחון</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('spinoza')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c5)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/220px-Spinoza.jpg" alt="שפינוזה" onerror="this.onerror=null;this.parentElement.innerHTML='♾️'"></div><div><div class="tc-nm">ברוך שפינוזה</div><div class="tc-dt">1632-1677 · אמסטרדם</div></div></div>
+<p class="tc-bio">נודה מהקהילה היהודית. "האתיקה". אלוהים = הטבע. חירות = הבנה.</p>
+<ul class="tc-pts"><li style="color:var(--c5)">רציונליזם אבסולוטי</li><li style="color:var(--c5)">מוסר = הבנת הכרחיות הטבע</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 6: ENLIGHTENMENT ========== -->
+<section class="era" id="e6">
+<div class="era-dot" style="border-color:var(--c6)"><i style="background:var(--c6)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c6)">💡</div>
+<div>
+<div class="era-per">1650 – 1800</div>
+<h2 class="era-ttl" style="color:var(--c6)">פרק ו': עידן הנאורות – חובה מול אושר</h2>
+<span class="era-par" style="color:var(--c6);border-color:var(--c6);background:var(--c6b)">שלטון התבונה · שיא האוטונומיה המוסרית</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>ניוטון · המהפכה הצרפתית · הכרזת זכויות האדם · הקמת ארה"ב · חילון ההגות</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c6)">🧠 קאנט: הפסגה הדאונטולוגית</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">מוסר אובייקטיבי ללא דת. מקור הסמכות <strong>פנימי לחלוטין</strong>. ציות לאל מתוך פחד = הטרונומיה, ואינו מוסרי.</p>
+<div class="tg">
+<div class="tc" onclick="openM('kant')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c6)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kant_gemaelde_3.jpg/220px-Kant_gemaelde_3.jpg" alt="קאנט" onerror="this.onerror=null;this.parentElement.innerHTML='🧠'"></div><div><div class="tc-nm">עמנואל קאנט</div><div class="tc-dt">1724-1804 · קניגסברג</div></div></div>
+<p class="tc-bio">שלוש "הביקורות". הציווי הקטגורי. מעולם לא עזב את קניגסברג.</p>
+<ul class="tc-pts"><li style="color:var(--c6)">הצו הקטגורי – חובה מוחלטת, לא מותנית</li><li style="color:var(--c6)">"אל תשתמש באדם כאמצעי בלבד"</li><li style="color:var(--c6)">אוטונומיה: ציות לתבונה העצמית</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c6)">❤️ תגובות נגד: רגש וחסידות</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">לא כולם קיבלו את שלטון התבונה הקרה.</p>
+<div class="tg">
+<div class="tc" onclick="openM('hume')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c6)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Painting_of_David_Hume.jpg/220px-Painting_of_David_Hume.jpg" alt="יום" onerror="this.onerror=null;this.parentElement.innerHTML='❤️'"></div><div><div class="tc-nm">דייוויד יום</div><div class="tc-dt">1711-1776 · סקוטלנד</div></div></div>
+<p class="tc-bio">"התבונה היא עבד לתשוקות". המוסר = רגש אמפתיה.</p>
+<ul class="tc-pts"><li style="color:var(--c6)">הגיליוטינה: אי אפשר להסיק "צריך" מ"הוא"</li><li style="color:var(--c6)">המוסר בנו, לא בעולם</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('besht')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c6)">✨</div><div><div class="tc-nm">הבעל שם טוב</div><div class="tc-dt">1698-1760 · אוקראינה</div></div></div>
+<p class="tc-bio">מייסד החסידות. קידוש החומר, שמחה, אימננציה.</p>
+<ul class="tc-pts"><li style="color:var(--c6)">האל בכל דבר – אימננציה</li><li style="color:var(--c6)">הרע = "טוב שטרם התברר"</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 7: 19TH CENTURY ========== -->
+<section class="era" id="e7">
+<div class="era-dot" style="border-color:var(--c7)"><i style="background:var(--c7)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c7)">⚙️</div>
+<div>
+<div class="era-per">1800 – 1900</div>
+<h2 class="era-ttl" style="color:var(--c7)">פרק ז': המאה ה-19 – אידיאולוגיות ומשבר</h2>
+<span class="era-par" style="color:var(--c7);border-color:var(--c7);background:var(--c7b)">כוח · תועלת · היסטוריה · ניהיליזם</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>המהפכה התעשייתית · דרוויניזם · מהפכות 1848 · תנועת העובדים · עליית הלאומיות</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c7)">📊 תועלתנות והמרד הגדול</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('mill')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c7)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/220px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg" alt="מיל" onerror="this.onerror=null;this.parentElement.innerHTML='📊'"></div><div><div class="tc-nm">ג'ון סטיוארט מיל</div><div class="tc-dt">1806-1873 · אנגליה</div></div></div>
+<p class="tc-bio">"מרב האושר למרב האנשים". עקרון הנזק – יסוד הליברליזם.</p>
+<ul class="tc-pts"><li style="color:var(--c7)">"עדיף סוקרטס סובל מחזיר מרוצה"</li><li style="color:var(--c7)">חופש הפרט עד שפוגע באחר</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('nietzsche')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c7)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/220px-Nietzsche187a.jpg" alt="ניטשה" onerror="this.onerror=null;this.parentElement.innerHTML='🔨'"></div><div><div class="tc-nm">פרידריך ניטשה</div><div class="tc-dt">1844-1900 · גרמניה</div></div></div>
+<p class="tc-bio">"אלוהים מת". דקונסטרוקציה של המוסר. מוסר עבדים מול אדונים.</p>
+<ul class="tc-pts"><li style="color:var(--c7)">ערכים = תוצר מאבקי כוח</li><li style="color:var(--c7)">העל-אדם – בורא ערכים מתוך עצמו</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 8: 20TH CENTURY ========== -->
+<section class="era" id="e8">
+<div class="era-dot" style="border-color:var(--c8)"><i style="background:var(--c8)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c8)">💥</div>
+<div>
+<div class="era-per">1900 – 2000</div>
+<h2 class="era-ttl" style="color:var(--c8)">פרק ח': המאה ה-20 – שבר, תיקון ואתיקה של האחר</h2>
+<span class="era-par" style="color:var(--c8);border-color:var(--c8);background:var(--c8b)">אחריות אישית · פירוק כוח · סינתזה</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>שתי מלחמות עולם · השואה · הירושימה · זכויות אדם · נפילת ברה"מ</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c8)">🌪️ אקזיסטנציאליזם ואתיקה של הפנים</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('sartre')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c8)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Jean-Paul_Sartre_FP.JPG/220px-Jean-Paul_Sartre_FP.JPG" alt="סארטר" onerror="this.onerror=null;this.parentElement.innerHTML='🌪️'"></div><div><div class="tc-nm">סארטר</div><div class="tc-dt">1905-1980 · צרפת</div></div></div>
+<p class="tc-bio">"אנו נידונים להיות חופשיים". הקיום קודם למהות. סירב לנובל.</p>
+<ul class="tc-pts"><li style="color:var(--c8)">אין טבע אנושי – אנו בוחרים את עצמנו</li><li style="color:var(--c8)">הונאה עצמית = בריחה מחירות</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('levinas')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c8)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emmanuel_Levinas.jpg/220px-Emmanuel_Levinas.jpg" alt="לוינס" onerror="this.onerror=null;this.parentElement.innerHTML='👤'"></div><div><div class="tc-nm">עמנואל לוינס</div><div class="tc-dt">1906-1995 · ליטא → צרפת</div></div></div>
+<p class="tc-bio">ניצול שואה. "פני האחר" = ציווי מוחלט. האתיקה קודמת לאונטולוגיה.</p>
+<ul class="tc-pts"><li style="color:var(--c8)">אחריות אינסופית – קודמת לחירות</li><li style="color:var(--c8)">הסובייקט מכונן מאחריות, לא ממחשבה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('arendt')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c8)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hannah_Arendt_1975_%28cropped%29.jpg/220px-Hannah_Arendt_1975_%28cropped%29.jpg" alt="ארנדט" onerror="this.onerror=null;this.parentElement.innerHTML='⚠️'"></div><div><div class="tc-nm">חנה ארנדט</div><div class="tc-dt">1906-1975 · גרמניה → ארה"ב</div></div></div>
+<p class="tc-bio">"הבנאליות של הרוע" – אייכמן = בירוקרט חסר-מחשבה, לא מפלצת.</p>
+<ul class="tc-pts"><li style="color:var(--c8)">רוע = היעדר מחשבה</li><li style="color:var(--c8)">הבירוקרטיה כמנגנון ניתוק מוסרי</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c8)">✡️ הרב קוק: סינתזה הוליסטית</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">בתוך הכאוס, ניסיון איחוי: קודש+חול, דת+מוסר טבעי, פרטיקולריזם+אוניברסליזם.</p>
+<div class="tg">
+<div class="tc" onclick="openM('ravkook')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c8)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/PikiWiki_Israel_2327_Rabbi_Abraham_Isaac_Kook_%D7%94%D7%A8%D7%91_%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%99%D7%A6%D7%97%D7%A7_%D7%94%D7%9B%D7%94%D7%9F_%D7%A7%D7%95%D7%A7.jpg/220px-PikiWiki_Israel_2327_Rabbi_Abraham_Isaac_Kook_%D7%94%D7%A8%D7%91_%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%99%D7%A6%D7%97%D7%A7_%D7%94%D7%9B%D7%94%D7%9F_%D7%A7%D7%95%D7%A7.jpg" alt="הרב קוק" onerror="this.onerror=null;this.parentElement.innerHTML='🕎'"></div><div><div class="tc-nm">הרב קוק</div><div class="tc-dt">1865-1935 · לטביה → ירושלים</div></div></div>
+<p class="tc-bio">הרב הראשי הראשון לא"י. סינתזה בין קודש לחול.</p>
+<ul class="tc-pts"><li style="color:var(--c8)">"אסור ליראת שמים שתדחק את המוסר הטבעי"</li><li style="color:var(--c8)">אבולוציה מוסרית – חזון הצמחונות</li><li style="color:var(--c8)">החול = חומר שהקודש זקוק לו</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c8)">🔍 פוסט-מודרניזם: פוקו</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('foucault')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c8)"><img src="https://upload.wikimedia.org/wikipedia/en/1/14/Michel_Foucault.jpg" alt="פוקו" onerror="this.onerror=null;this.parentElement.innerHTML='🔍'"></div><div><div class="tc-nm">מישל פוקו</div><div class="tc-dt">1926-1984 · צרפת</div></div></div>
+<p class="tc-bio">המוסר ככלי כוח. "מי מגדיר את הנורמלי?" – ידע/כוח.</p>
+<ul class="tc-pts"><li style="color:var(--c8)">כל הגדרת "טוב" משרתת מישהו</li><li style="color:var(--c8)">דיסציפלינה ומעקב כמנגנוני מוסר</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<!-- ========== ERA 9: 21ST CENTURY ========== -->
+<section class="era" id="e9">
+<div class="era-dot" style="border-color:var(--c9)"><i style="background:var(--c9)"></i></div>
+<div class="era-hdr">
+<div class="era-img" style="border-color:var(--c9)">🤖</div>
+<div>
+<div class="era-per">2000 – הווה</div>
+<h2 class="era-ttl" style="color:var(--c9)">פרק ט': המאה ה-21 – אתיקה טכנולוגית ופוסט-אנושית</h2>
+<span class="era-par" style="color:var(--c9);border-color:var(--c9);background:var(--c9b)">טשטוש גבולות · אחריות לדורות הבאים · AI</span>
+</div>
+</div>
+<div class="era-ev"><b>🗓️ אירועים מכוננים</b><p>מהפכת AI · פענוח הגנום · רשתות חברתיות · משבר אקלים · ChatGPT</p></div>
+
+<div class="str op">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c9)">🧬 טרנס-הומניזם ודאטא-איזם</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('harari')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c9)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Yuval_Noah_Harari_cropped.jpg/220px-Yuval_Noah_Harari_cropped.jpg" alt="הררי" onerror="this.onerror=null;this.parentElement.innerHTML='📱'"></div><div><div class="tc-nm">יובל נח הררי</div><div class="tc-dt">1976- · ישראל</div></div></div>
+<p class="tc-bio">דאטא-איזם: מ"מה אלוהים רוצה" ל"מה הוויז ממליץ".</p>
+<ul class="tc-pts"><li style="color:var(--c9)">הנתונים = הדת החדשה</li><li style="color:var(--c9)">האדם כאלגוריתם ביוכימי</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('bostrom')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c9)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Nick_Bostrom_at_Summit_on_AI.jpg/220px-Nick_Bostrom_at_Summit_on_AI.jpg" alt="בוסטרום" onerror="this.onerror=null;this.parentElement.innerHTML='🧬'"></div><div><div class="tc-nm">ניק בוסטרום</div><div class="tc-dt">1973- · שוודיה</div></div></div>
+<p class="tc-bio">חובה מוסרית לשפר את האדם. סיכונים אקזיסטנציאליים מ-AI.</p>
+<ul class="tc-pts"><li style="color:var(--c9)">הטבע האנושי אינו קדוש</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<div class="str">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--c9)">🌍 אקולוגיה ואחריות בין-דורית</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<div class="tg">
+<div class="tc" onclick="openM('jonas')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--c9)">🌍</div><div><div class="tc-nm">הנס יונאס</div><div class="tc-dt">1903-1993 · גרמניה → ארה"ב</div></div></div>
+<p class="tc-bio">"עיקרון האחריות": חובה שלא להרוס אפשרות לחיים בעתיד.</p>
+<ul class="tc-pts"><li style="color:var(--c9)">אחריות לדורות שלא נולדו</li><li style="color:var(--c9)">היוריסטיקה של הפחד – זהירות כערך</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+</div><!-- END TIMELINE -->
+
+<!-- ========== EPILOGUE ========== -->
+<section class="epi" id="epi">
+<div class="epi-c">
+<span class="epi-badge">⚡ אפילוג</span>
+<h2 class="epi-t">הניאו-תאולוגיה: השיבה אל האורקל</h2>
+<p style="color:var(--text2);margin-bottom:1.5rem">אם ניטשה הכריז על "מות האלוהים", המאה ה-21 מסמנת את תחייתו הדיגיטלית. האדם מוותר מרצונו על האוטונומיה לטובת ישות יודעת-כל.</p>
+
+<div class="str op" style="border-color:rgba(204,51,51,.2)">
+<div class="str-h" onclick="tgl(this)"><span class="str-n" style="color:var(--cE)">📦 הקופסה השחורה, השגחה אלגוריתמית ועבודת אלילים חדשה</span><span class="str-a">▾</span></div>
+<div class="str-c"><div class="str-b">
+<p class="str-d">בעת העתיקה עמדו מול האורקל וקיבלו תשובה בלי להבין כיצד. כיום מערכות AI קובעות גורלות, ואפילו המתכנתים לא יודעים למה. עבודת אלילים בתנ"ך = השתחוויה ל"מעשה ידי אדם". ה-AI הוא יציר כפינו שאנו משתחווים לו – <strong>עגל הזהב הדיגיטלי</strong>.</p>
+<div class="tg">
+<div class="tc" onclick="openM('pasquale')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--cE)">📦</div><div><div class="tc-nm">פרנק פסקוואלה</div><div class="tc-dt">1972- · ארה"ב</div></div></div>
+<p class="tc-bio">"החברה של הקופסה השחורה" – יחסנו ל-AI = יחס דתי.</p>
+<ul class="tc-pts"><li style="color:var(--cE)">ציות עיוור לאלגוריתמים אטומים</li><li style="color:var(--cE)">חזרה לציות העיוור של מסופוטמיה</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('zuboff')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--cE)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Shoshana_Zuboff_-_9131603589.jpg/220px-Shoshana_Zuboff_-_9131603589.jpg" alt="זובוף" onerror="this.onerror=null;this.parentElement.innerHTML='👁️'"></div><div><div class="tc-nm">שושנה זובוף</div><div class="tc-dt">1951- · ארה"ב</div></div></div>
+<p class="tc-bio">"האחר הגדול" – קפיטליזם מעקב. האלגוריתם: יודע-כל, נמצא-בכל.</p>
+<ul class="tc-pts"><li style="color:var(--cE)">הקרבת פרטיות כ"קורבן" לאלגוריתם</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('kurzweil')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--cE)">⚡</div><div><div class="tc-nm">ריי קורצווייל</div><div class="tc-dt">1948- · ארה"ב</div></div></div>
+<p class="tc-bio">הסינגולריות (~2045) כגאולה משיחית חילונית. העלאת תודעה = חיי נצח.</p>
+<ul class="tc-pts"><li style="color:var(--cE)">אסכטולוגיה חילונית – "ביאת המשיח" טכנולוגית</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+<div class="tc" onclick="openM('bridle')">
+<div class="tc-top"><div class="tc-av" style="border-color:var(--cE)">🌑</div><div><div class="tc-nm">ג'יימס בריידל</div><div class="tc-dt">1980- · אנגליה</div></div></div>
+<p class="tc-bio">"עידן החושך החדש". Prompt כלחש. סגידה לטכנולוגיה = אלילות.</p>
+<ul class="tc-pts"><li style="color:var(--cE)">שיא טכנולוגיה = שיא בערות</li></ul>
+<button class="tc-btn">העמקה ←</button>
+</div>
+</div>
+</div></div>
+</div>
+
+<h3 style="color:var(--cE);margin-top:2rem;font-family:'Frank Ruhl Libre',serif;font-size:1.2rem">📊 טבלה השוואתית: העת העתיקה מול עידן ה-AI</h3>
+<table class="ctbl">
+<tr><th>מאפיין</th><th>העת העתיקה</th><th>המאה ה-21</th></tr>
+<tr><td><b>מקור הידע</b></td><td>אורקל / נביא</td><td>מודל שפה / ביג דאטה</td></tr>
+<tr><td><b>אופי הישות</b></td><td>מסתורי, בלתי מובן</td><td>"קופסה שחורה"</td></tr>
+<tr><td><b>יחס האדם</b></td><td>כניעה, הקרבת קורבנות</td><td>מסירת פרטיות, ציות להמלצות</td></tr>
+<tr><td><b>הטקס</b></td><td>תפילה, לחש</td><td>כתיבת Prompt</td></tr>
+<tr><td><b>הסכנה</b></td><td>זעם האלים</td><td>הטיה אלגוריתמית, "הזיה"</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ========== CONCLUSION ========== -->
+<section class="conc" id="conc">
+<div class="conc-c">
+<h2>סיכום: התהליך הדיאלקטי</h2>
+<div class="hero-line" style="margin:1rem auto"></div>
+<div class="dia-f">
+<div class="dia-b" style="border-color:var(--c1);color:var(--c1)"><b>תזה</b><small>המוסר חיצוני ואובייקטיבי</small></div>
+<span class="dia-a">→</span>
+<div class="dia-b" style="border-color:var(--c6);color:var(--c6)"><b>אנטיתזה</b><small>המוסר פנימי וסובייקטיבי</small></div>
+<span class="dia-a">→</span>
+<div class="dia-b" style="border-color:var(--cE);color:var(--cE)"><b>סינתזה / שבר</b><small>המוסר הופך טכנולוגי</small></div>
+</div>
+<p style="color:var(--text2);margin-top:1.5rem;line-height:2;font-size:.9rem">המסע נע מ<b>פחד</b> (מסופוטמיה) ל<b>הרמוניה</b> (מצרים), מ<b>ברית וצדק</b> (תנ"ך) ל<b>תבונה</b> (יוון), דרך <b>חמלה</b> (בודהא) ו<b>חובה</b> (קאנט), ולבסוף ל<b>אחריות טכנולוגית</b> (2025). האתגר: <b>סירוב לאלילות הטכנולוגית</b> – שמירה על שיפוט אנושי בלתי-מושלם מול "אמת" מוחלטת של המכונה.</p>
+</div>
+</section>
+
+<footer class="footer"><p>תולדות המוסר האנושי: אבולוציה של תודעה וצדק · סקירה היסטורית-פילוסופית</p></footer>
+
+<!-- ========== SUMMARY TABLE OVERLAY ========== -->
+<div class="sov" id="sov">
+<div class="sov-c">
+<button class="sov-x" onclick="toggleS()">✕</button>
+<h2 style="font-family:'Frank Ruhl Libre',serif;color:var(--gold);margin-bottom:1rem">📊 טבלה אינטגרטיבית</h2>
+<table class="stbl">
+<thead><tr><th>פרק</th><th>טווח</th><th>פרדיגמה</th><th>זרמים ודמויות</th></tr></thead>
+<tbody>
+<tr onclick="goTo('e1')" style="cursor:pointer"><td style="color:var(--c1);font-weight:700">א. העת העתיקה</td><td>אלף 3–600 לפנה"ס</td><td>סדר · ברית · דואליזם</td><td><b>מסופוטמיה:</b> חמורבי<br><b>מצרים:</b> מאע'ת<br><b>תנ"ך:</b> אברהם, משה, נביאים<br><b>פרס:</b> זרתוסטרא</td></tr>
+<tr onclick="goTo('e2')" style="cursor:pointer"><td style="color:var(--c2);font-weight:700">ב. עידן הצירים</td><td>800-200 לפנה"ס</td><td>אתיקה של מידות</td><td><b>יוון:</b> סוקרטס, אפלטון, אריסטו<br><b>סין:</b> קונפוציוס, מנציוס, שו'ן דזה<br><b>הודו:</b> גיטה, בודהא</td></tr>
+<tr onclick="goTo('e3')" style="cursor:pointer"><td style="color:var(--c3);font-weight:700">ג. שלהי העת העתיקה</td><td>200 לפנה"ס–600</td><td>תאולוגית-גאולתית</td><td>חז"ל, אוגוסטינוס, אל-גזאלי</td></tr>
+<tr onclick="goTo('e4')" style="cursor:pointer"><td style="color:var(--c4);font-weight:700">ד. ימי הביניים</td><td>800-1400</td><td>סינתזה אמונה-תבונה</td><td>רמב"ם, אקווינס</td></tr>
+<tr onclick="goTo('e5')" style="cursor:pointer"><td style="color:var(--c5);font-weight:700">ה. רנסנס ומאה 17</td><td>1400-1650</td><td>הומניזם וריאליזם</td><td>מקיאבלי, דקארט, הובס, שפינוזה</td></tr>
+<tr onclick="goTo('e6')" style="cursor:pointer"><td style="color:var(--c6);font-weight:700">ו. הנאורות</td><td>1650-1800</td><td>רציונליזם אוטונומי</td><td>קאנט, יום, הבעש"ט</td></tr>
+<tr onclick="goTo('e7')" style="cursor:pointer"><td style="color:var(--c7);font-weight:700">ז. המאה ה-19</td><td>1800-1900</td><td>כוח ותועלת</td><td>מיל, ניטשה</td></tr>
+<tr onclick="goTo('e8')" style="cursor:pointer"><td style="color:var(--c8);font-weight:700">ח. המאה ה-20</td><td>1900-2000</td><td>אחריות ופירוק</td><td>סארטר, לוינס, ארנדט, הרב קוק, פוקו</td></tr>
+<tr onclick="goTo('e9')" style="cursor:pointer"><td style="color:var(--c9);font-weight:700">ט. המאה ה-21</td><td>2000-הווה</td><td>פוסט-אנושית</td><td>הררי, בוסטרום, יונאס</td></tr>
+<tr onclick="goTo('epi')" style="cursor:pointer"><td style="color:var(--cE);font-weight:700">אפילוג</td><td>2020+</td><td>ניאו-תאולוגיה טכנולוגית</td><td>פסקוואלה, זובוף, קורצווייל, בריידל</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- ========== MODAL ========== -->
+<div class="mo" id="mo" onclick="if(event.target===this)closeM()">
+<div class="ml" onclick="event.stopPropagation()">
+<button class="ml-x" onclick="closeM()">✕</button>
+<div class="ml-hdr" id="mH"></div>
+<div class="ml-body" id="mB"></div>
+</div>
+</div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+const D={
+hammurabi:{n:'חמורבי',d:'~1792-1750 לפנה"ס',l:'בבל',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Milkau_Oberer_Teil_der_Stele_mit_dem_Text_von_Hammurapis_Gesetzescode_369-2.jpg/220px-Milkau_Oberer_Teil_der_Stele_mit_dem_Text_von_Hammurapis_Gesetzescode_369-2.jpg',e:'👑',c:'var(--c1)',b:'מלך בבל השישי. איחד מסופוטמיה וחקק 282 חוקים על סטלת בזלת – המסמך המשפטי הקדום ביותר.',p:['עקרון הגמול המידתי – "עין תחת עין" = הגבלת נקמה, לא אכזריות.','מוסר כחוזה חברתי – הסכם פרקטי למניעת כאוס, לא ערכים נשגבים.','היררכיה מעמדית – ענישה שונה לפי מעמד. המוסר עדיין לא אוניברסלי.','סמכות אלוהית כלגיטימציה – שליח שמש, אך החוקים = יצירה פוליטית.'],q:['"כדי שהחזק לא ידכא את החלש, כדי שייעשה דין ליתום ולאלמנה"'],s:'הרגע שבו המוסר עובר מנקמת דם לחוק כתוב. צעד ראשון ברציונליזציה, אך הטרונומי לחלוטין.'},
+maat:{n:'ספר המתים והמאע\'ת',d:'~1550-50 לפנה"ס',l:'מצרים',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Maat.svg/220px-Maat.svg.png',e:'🪶',c:'var(--c1)',b:'אוסף לחשים ותפילות. "משפט אוזיריס" – לב הנפטר נשקל מול נוצת מאע\'ת.',p:['מאע\'ת כאונטולוגיה – הסדר הקוסמי עצמו. חטא = פגיעה במרקם המציאות.','הוידוי השלילי – 42 הצהרות "לא עשיתי". הפנמת המוסר מעבר לציות.','שקילת הלב – לא רק מעשים נשפטים אלא כוונה פנימית.','תיקון קוסמי – התנהגות מוסרית הכרחית לקיום היקום.'],q:['"ליבי לא עשה כנגד מאע\'ת"'],s:'תחילת מעבר מחוק חיצוני לבדיקה פנימית – שורש המצפון.'},
+zarathustra:{n:'זרתוסטרא',d:'מאה 10-6 לפנה"ס',l:'פרס',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Faravahar.svg/220px-Faravahar.svg.png',e:'🔥',c:'var(--c1)',b:'נביא פרסי, מייסד הזורואסטריות. אבי הדואליזם המוסרי.',p:['העולם = שדה קרב בין אהורה-מזדא (טוב) לאהרימן (רע).','האדם = לשון המאזניים. לא עבד אלא שותף. מעשינו מכריעים.','השילוש: מחשבה טובה, דיבור טוב, מעשה טוב.','בחירה חופשית אקטיבית – השתתפות, לא ציות פסיבי.'],q:['"מחשבה טובה, דיבור טוב, מעשה טוב"'],s:'הפך את האדם משרת לשותף במאבק הקוסמי. קפיצה עצומה לאחריות מוסרית אישית.'},
+abraham:{n:'אברהם אבינו',d:'~1800 לפנה"ס',l:'אור כשדים → כנען',e:'🌟',c:'var(--c1)',b:'אב האומה העברית. בן דורו של חמורבי.',p:['הוויכוח על סדום – "השופט כל הארץ לא יעשה משפט?" ערעור על סמכות אלוהית.','לידת המצפון – האדם טוען מול האל שהצדק מחייב גם אותו.','ברית = מערכת דו-צדדית, לא כניעה חד-צדדית.'],q:['"חלילה לך מעשות כדבר הזה – להמית צדיק עם רשע"'],s:'רגע לידת המצפון: האדם עומד מול האל ותובע צדק.'},
+moses:{n:'משה רבנו',d:'~1300 לפנה"ס',l:'מצרים → סיני → כנען',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_WGA19289.jpg/220px-Guido_Reni_-_Moses_with_the_Tables_of_the_Law_-_WGA19289.jpg',e:'⛰️',c:'var(--c1)',b:'מנהיג, מחוקק ונביא. הוציא את ישראל ממצרים.',p:['עשרת הדברות – ציוויים מוחלטים ואוניברסליים.','הגנה על החלש – מול חמורבי: הגר, היתום, האלמנה.','בצלם אלוהים – שוויון מהותי מיסודו.','הפרדת כהונה ומלוכה – גרעין הפרדת דת ומדינה.'],q:['"לא תרצח. לא תנאף. לא תגנוב."'],s:'מהפכה: הגנה על החלש, שוויון בצלם, חוק אוניברסלי.'},
+prophets:{n:'נביאי ישראל',d:'מאה 8-6 לפנה"ס',l:'ישראל ויהודה',e:'📢',c:'var(--c1)',b:'עמוס, הושע, ישעיהו, ירמיהו, מיכה – ביקורת חברתית רדיקלית בשם האל.',p:['מוסר > פולחן – "שנאתי מאסתי חגיכם" (עמוס).','תקיפת עשירים ושופטים מושחתים.','חזון אוניברסלי – "וכתתו חרבותם לאתים".'],q:['"הגד לך אדם מה טוב: עשות משפט, אהבת חסד, והצנע לכת" (מיכה)'],s:'המצפון הראשון של האנושות. ביקורת כוח בשם צדק.'},
+socrates:{n:'סוקרטס',d:'470-399 לפנה"ס',l:'אתונה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Socrate_du_Louvre.jpg/220px-Socrate_du_Louvre.jpg',e:'🗣️',c:'var(--c2)',b:'אבי הפילוסופיה. לא כתב מילה. הוצא להורג.',p:['אינטלקטואליזם מוסרי – המידה הטובה = ידע. הרוע = בורות.','השיטה הדיאלקטית – חקירה דרך שאלות.','חיים לא נבחנים אינם שווים לחיותם.','דאימון – קול פנימי שמרסן.'],q:['"דע את עצמך"','"אני יודע שאינני יודע"'],s:'ממציא הפילוסופיה המוסרית כפעילות אנושית עצמאית.'},
+plato:{n:'אפלטון',d:'428-348 לפנה"ס',l:'אתונה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/220px-Plato_Silanion_Musei_Capitolini_MC1377.jpg',e:'🏛️',c:'var(--c2)',b:'מייסד האקדמיה (387 לפנה"ס). תורת האידיאות.',p:['ה"טוב" = אידיאה עליונה מעבר לעולם המוחשי.','אינטלקטואליזם – "אף אדם אינו חוטא מרצון". הרוע = בורות.','משל המערה – רוב האנשים רואים צללים.','נפש תלת-חלקית: תבונה, עוז, תאווה. צדק = הרמוניה.'],q:['"הגוף הוא קבר הנשמה"'],s:'המוסר = ידיעה. אך של אמת אובייקטיבית, כך שעדיין "הטרונומי" במידה מסוימת.'},
+aristotle:{n:'אריסטו',d:'384-322 לפנה"ס',l:'סטאגירה → אתונה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/220px-Aristotle_Altemps_Inv8575.jpg',e:'📚',c:'var(--c2)',b:'תלמיד אפלטון, מורה אלכסנדר. "האתיקה הניקומאכית".',p:['אתיקה של מידות – לא "מה לעשות?" אלא "איזה אדם להיות?".','האמצע הזהוב – כל מידה = איזון בין קיצונות.','הרגל ותרגול – "נהיים אמיצים ע"י מעשים אמיצים".','אאודימוניה – שגשוג, מימוש פוטנציאל.'],q:['"אנו מה שאנו עושים שוב ושוב"'],s:'המוסר = תרגול. השפעתו על ימי הביניים ועל הפילוסופיה בת-זמננו עצומה.'},
+confucius:{n:'קונפוציוס',d:'551-479 לפנה"ס',l:'לו, סין',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Konfuzius-1770.jpg/220px-Konfuzius-1770.jpg',e:'☯️',c:'var(--c2)',b:'מייסד הקונפוציאניזם. עיצב את תרבות מזרח אסיה.',p:['ז\'ן – רחמים. "מה ששנוא עליך אל תעשה לחברך".','לי – טקסים כתבנית לעיצוב מוסרי.','חמשת היחסים – אין "אני" עצמאי; מוגדר ע"י חובות.'],q:['"למד ואל תחשוב – תאבד"'],s:'מוסר רלציוני – שונה מהאינדיבידואליזם המערבי.'},
+mencius:{n:'מנציוס',d:'372-289 לפנה"ס',l:'סין',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Mencius.jpg/220px-Mencius.jpg',e:'🌱',c:'var(--c2)',b:'ממשיך קונפוציוס. טבע האדם טוב.',p:['טבע טוב – כמו מים שזורמים למטה.','ארבע נטיות מולדות – רחמים, בושה, כבוד, שיפוט.','סביבה רעה "עוקרת" את הטוב כמו גרזנים שמכריתים יער.'],q:['"אין אדם שאינו נוטה לטוב"'],s:'אופטימיזם שיהדהד אצל רוסו ובחינוך המודרני.'},
+xunzi:{n:'שו\'ן דזה',d:'310-235 לפנה"ס',l:'סין',e:'⚒️',c:'var(--c2)',b:'קונפוציאני פסימיסט.',p:['טבע רע – תשוקות, קנאה. ללא ריסון = כאוס.','המוסר = מלאכה. כמו יישור עץ עקום.','מוסדות חיצוניים הכרחיים.'],q:['"מה שנראה טוב באדם הוא מלאכותי"'],s:'מקדים את הובס ב-2000 שנה.'},
+gita:{n:'הבהגווד גיטה',d:'מאה 5-2 לפנה"ס',l:'הודו',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Bhagavad_Gita%2C_19th_century.jpg/220px-Bhagavad_Gita%2C_19th_century.jpg',e:'🙏',c:'var(--c2)',b:'דיאלוג בין ארג\'ונה לקרישנה.',p:['פעולה מתוך חובה (דהרמה) ללא תשוקה לתוצאות.','ביטול האגו = מפתח לפעולה מוסרית.'],q:['"אתה זכאי לעבודה בלבד, לא לפירותיה"'],s:'מוסר של עשייה מנותקת מאגו. השפיע על גנדי.'},
+buddha:{n:'בודהא',d:'~563-483 לפנה"ס',l:'הודו',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg/220px-Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg',e:'☸️',c:'var(--c2)',b:'מייסד הבודהיזם. נסיך שחיפש תשובה לסבל.',p:['ארבע אמיתות – הסבל קיים; נובע מהשתוקקות; אפשר לבטל; הדרך המתומנת.','חמלה – אין "אני" נפרד. פגיעה באחר = פגיעה עצמית.','שבירת מעמדות – מוסר תלוי במעשים, לא בלידה.'],q:['"שנאה נרפאת באהבה"'],s:'מוסר כרפואה. לא חוק חיצוני אלא תובנה פנימית.'},
+chazal:{n:'חכמי התלמוד',d:'200 לפנה"ס - 500',l:'א"י ובבל',e:'📖',c:'var(--c3)',b:'יצרו מסגרת הלכתית-מוסרית פלורליסטית.',p:['"לא בשמים היא" – תנורו של עכנאי. תגובת האל: "נצחוני בניי!"','מחלוקת כערך – "אלו ואלו דברי אלוהים חיים".','יצר הרע כמנוע – "אלמלא יצר הרע לא בנה אדם בית".','תורה + דרך ארץ – מוסר שקדם לתורה.'],q:['"לא עליך המלאכה לגמור"'],s:'מהטרונומיה לאוטונומיה מפוקחת. הסמכות עברה לאדם בתוך מסורת.'},
+augustine:{n:'אוגוסטינוס',d:'354-430',l:'היפו',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/220px-Saint_Augustine_by_Philippe_de_Champaigne.jpg',e:'⛪',c:'var(--c3)',b:'אב הכנסייה. "הוידויים", "עיר האלוהים".',p:['החטא הקדמון – טבע אנושי פגום לנצח.','חסד – רק חסד אלוהי חינמי מושיע.','הרצון הפגום – "רציתי את הטוב, אך לא מספיק".','שתי ערים – עיר האלוהים מול עיר האדם.'],q:['"תן לי צניעות – אבל לא עכשיו"'],s:'הטרונומיה מוחלטת. תגובה לאופטימיזם היווני.'},
+alghazali:{n:'אל-גזאלי',d:'1058-1111',l:'פרס',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Al-Ghazali.png/220px-Al-Ghazali.png',e:'🕌',c:'var(--c3)',b:'"התמוטטות הפילוסופים". וולונטריזם.',p:['הטוב = רצון האל בלבד. אין מוסר טבעי.','הרס הפילוסופיה הרציונלית.','סופיזם – הדרך הישירה = דרך הלב.'],q:['"אין דרך אל האל אלא דרך הלב"'],s:'סגר את הדלת לרציונליזם באסלאם.'},
+rambam:{n:'הרמב"ם',d:'1138-1204',l:'קורדובה → מצרים',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Maimonides-2.jpg/220px-Maimonides-2.jpg',e:'✡️',c:'var(--c4)',b:'פוסק, פילוסוף, רופא. "מורה הנבוכים", "משנה תורה".',p:['אינטלקטואליזם – תכלית המוסר = ידיעת האל.','המצוות = כלים רציונליים חינוכיים.','דרך האמצע (אריסטו+תורה). חריגה רק בגאווה וכעס.','8 דרגות צדקה – העליונה: לסייע להתפרנס בעצמו.'],q:['"קבל את האמת ממי שאמרה"'],s:'פסגת הסינתזה אריסטו-תורה. השפעה על אקווינס ועל כל ההגות היהודית.'},
+aquinas:{n:'תומאס אקווינס',d:'1225-1274',l:'איטליה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/St-thomas-aquinas.jpg/220px-St-thomas-aquinas.jpg',e:'⛪',c:'var(--c4)',b:'נזיר דומיניקני. "סומה תאולוגית".',p:['4 שכבות חוק: נצחי, טבעי, אנושי, אלוהי.','גם כופרים מוסריים – חוק הטבע מוטבע בתבונה.','החסד משלים את הטבע, לא הורס אותו.'],q:['"החסד אינו הורס את הטבע אלא משלים אותו"'],s:'הגשר הגדול בין אמונה לתבונה. בסיס לזכויות אדם.'},
+machiavelli:{n:'מקיאבלי',d:'1469-1527',l:'פירנצה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/220px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg',e:'🦊',c:'var(--c5)',b:'"הנסיך". דיפלומט שהפריד מוסר מפוליטיקה.',p:['Virtù (מידות פוליטיות) ≠ מוסר נוצרי.','ריאליזם: "כיצד חיים" ≠ "כיצד צריכים".','שועל+אריה. "עדיף שיירא".'],q:['"כל הנביאים החמושים ניצחו"'],s:'פותח דלת לחשיבה חילונית וריאליסטית.'},
+descartes:{n:'רנה דקארט',d:'1596-1650',l:'צרפת',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/220px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg',e:'🤔',c:'var(--c5)',b:'אבי הפילוסופיה המודרנית. ספק שיטתי.',p:['ספק בכל עד שמגיעים לוודאות.','מוסר זמני – ציות לחוקי המקום עד שהתבונה מוצאת אמת.','Générosité – תודעת חירות = מעשים נכונים.'],q:['"אני חושב, משמע אני קיים"'],s:'מעביר מרכז כובד מאל לאדם חושב.'},
+hobbes:{n:'תומאס הובס',d:'1588-1679',l:'אנגליה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Hobbes_%28portrait%29.jpg/220px-Thomas_Hobbes_%28portrait%29.jpg',e:'🐺',c:'var(--c5)',b:'"לוויתן". מלחמת האזרחים עיצבה את תפיסתו.',p:['מצב הטבע = "מלחמת הכל בכל". חיים "בודדים, עלובים, ברוטליים וקצרים".','אמנה חברתית – ויתור חירות תמורת ביטחון.','מוסר מלאכותי – "צדק" = ציות לחוק שנקבע.'],q:['"אדם לאדם – זאב"'],s:'אבי הליברליזם: מוסר ומדינה לשירות האדם, לא האל.'},
+spinoza:{n:'ברוך שפינוזה',d:'1632-1677',l:'אמסטרדם',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/220px-Spinoza.jpg',e:'♾️',c:'var(--c5)',b:'נודה מהקהילה היהודית. "האתיקה".',p:['אלוהים = הטבע. אין ישות נפרדת.','רציונליזם אבסולוטי – מי שמבין הכרחיות, פועל נכון.','חירות = הבנה, לא חוסר כפייה.'],q:['"חירות היא הכרח מובן"'],s:'הרדיקלי ביותר: אין אל אישי, אין בחירה חופשית, אין רוע מהותי.'},
+kant:{n:'עמנואל קאנט',d:'1724-1804',l:'קניגסברג',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kant_gemaelde_3.jpg/220px-Kant_gemaelde_3.jpg',e:'🧠',c:'var(--c6)',b:'שלוש "הביקורות". מעולם לא עזב קניגסברג.',p:['הצו הקטגורי – "עשה רק לפי מקסימה שתרצה כחוק אוניברסלי".','ניסוח הכבוד – "אל תשתמש באדם רק כאמצעי".','אוטונומיה – מקור המוסר = התבונה העצמית. ציות מפחד ≠ מוסרי.','חובה מול נטייה – מעשה מוסרי אמיתי = מתוך חובה.'],q:['"שמיים זרועי כוכבים מעלי, והחוק המוסרי בתוכי"'],s:'שיא האוטונומיה. בסיס זכויות אדם, דמוקרטיה, משפט בינלאומי.'},
+hume:{n:'דייוויד יום',d:'1711-1776',l:'סקוטלנד',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Painting_of_David_Hume.jpg/220px-Painting_of_David_Hume.jpg',e:'❤️',c:'var(--c6)',b:'אמפיריציסט וספקן.',p:['"התבונה = עבד לתשוקות". הרגש מניע, לא הלוגיקה.','אמפתיה כיסוד – סנטימנט טבעי.','הגיליוטינה – אי אפשר להסיק "צריך" מ"הוא".'],q:['"התבונה היא שפחת התשוקות"'],s:'המתנגד הגדול לרציונליזם המוסרי.'},
+besht:{n:'הבעל שם טוב',d:'1698-1760',l:'אוקראינה',e:'✨',c:'var(--c6)',b:'מייסד החסידות. מרקע עני לדמות כריזמטית.',p:['אימננציה – אלוהים בכל דבר.','שמחה – עצבות = חטא. אכילה ושינה = עבודת קודש.','הרע = "טוב שטרם התברר".','דבקות בכל מעשה יומיומי.'],q:['"עיקר עבודת ה\' היא בשמחה"'],s:'תגובה לרציונליזם: מוסר = אהבה, שמחה, נוכחות.'},
+mill:{n:'ג\'ון סטיוארט מיל',d:'1806-1873',l:'לונדון',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/220px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg',e:'📊',c:'var(--c7)',b:'פילוסוף, כלכלן, פמיניסט.',p:['"מרב האושר למרב האנשים".','הבחנה איכותית – "עדיף סוקרטס סובל מחזיר מרוצה".','עקרון הנזק – חופש עד שפוגע באחר.'],q:['"על גופו ונפשו, האדם הוא ריבון"'],s:'אבי הליברליזם המודרני.'},
+nietzsche:{n:'פרידריך ניטשה',d:'1844-1900',l:'גרמניה',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/220px-Nietzsche187a.jpg',e:'🔨',c:'var(--c7)',b:'פרופסור בגיל 24. קרס בטירוף 1889.',p:['"אלוהים מת" – אבחנה: האדם חי לפי מוסר דתי בלי אמונה. ניהיליזם.','מוסר עבדים מול אדונים – נצרות הפכה חולשה ל"טוב" מתוך טינה.','העל-אדם – בורא ערכים מתוך עצמו.','החזרה הנצחית – תבחר בחייך שוב ושוב?'],q:['"מה שלא הורג אותי מחזק אותי"','"כשאתה מביט לתהום, גם היא מביטה בך"'],s:'מפוצץ המוסר המערבי. הערכים = תוצר מאבקי כוח.'},
+sartre:{n:'סארטר',d:'1905-1980',l:'פריז',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Jean-Paul_Sartre_FP.JPG/220px-Jean-Paul_Sartre_FP.JPG',e:'🌪️',c:'var(--c8)',b:'סירב לנובל 1964.',p:['"הקיום קודם למהות". אין טבע אנושי. "נידונים להיות חופשיים".','הונאה עצמית – בריחה מחירות.','אחריות מוחלטת – כל בחירה = בשם האנושות.'],q:['"הגיהינום – זה האחרים"'],s:'שיא האינדיבידואליזם – ונקודת שבירתו.'},
+levinas:{n:'עמנואל לוינס',d:'1906-1995',l:'ליטא → צרפת',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emmanuel_Levinas.jpg/220px-Emmanuel_Levinas.jpg',e:'👤',c:'var(--c8)',b:'ניצול שואה. פנומנולוגיה + תלמוד.',p:['האתיקה קודמת לאונטולוגיה.','פני האחר = "לא תרצח". מפגש קדם-מושגי.','אחריות אינסופית, קודמת לחירות.'],q:['"פני האחר אומרים: לא תרצח"'],s:'מוסר שמתעורר מפגיעות הזולת, לא מבחירה רציונלית.'},
+arendt:{n:'חנה ארנדט',d:'1906-1975',l:'גרמניה → ארה"ב',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hannah_Arendt_1975_%28cropped%29.jpg/220px-Hannah_Arendt_1975_%28cropped%29.jpg',e:'⚠️',c:'var(--c8)',b:'סיקרה את משפט אייכמן.',p:['הבנאליות של הרוע – בירוקרט חסר-מחשבה, לא מפלצת.','מוסר דורש דיאלוג פנימי – אייכמן לא "חשב".','טוטליטריאניזם הורס יכולת פעולה משותפת.'],q:['"הדבר העצוב: אייכמן נראה נורמלי"'],s:'אזהרה: רוע דורש רק אנשים שמפסיקים לחשוב.'},
+ravkook:{n:'הרב קוק',d:'1865-1935',l:'לטביה → ירושלים',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/PikiWiki_Israel_2327_Rabbi_Abraham_Isaac_Kook_%D7%94%D7%A8%D7%91_%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%99%D7%A6%D7%97%D7%A7_%D7%94%D7%9B%D7%94%D7%9F_%D7%A7%D7%95%D7%A7.jpg/220px-PikiWiki_Israel_2327_Rabbi_Abraham_Isaac_Kook_%D7%94%D7%A8%D7%91_%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%99%D7%A6%D7%97%D7%A7_%D7%94%D7%9B%D7%94%D7%9F_%D7%A7%D7%95%D7%A7.jpg',e:'🕎',c:'var(--c8)',b:'הרב הראשי הראשון לא"י. סינתזה הוליסטית.',p:['"אסור ליראת שמים שתדחק את המוסר הטבעי". דת שפוגעת = פגומה.','אחדות הפכים – החול = חומר שהקודש זקוק לו.','אבולוציה מוסרית – חזון הצמחונות.','תשובה קוסמית – כל חזרה = חלק מתהליך גדול.'],q:['"ישנם צדיקים כה גדולים שאינם יכולים לסבול שום רוע"'],s:'איחוי: קודש+חול, דת+מוסר טבעי, מסורת+מודרנה.'},
+foucault:{n:'מישל פוקו',d:'1926-1984',l:'צרפת',img:'https://upload.wikimedia.org/wikipedia/en/1/14/Michel_Foucault.jpg',e:'🔍',c:'var(--c8)',b:'חקר כוח, ידע ומוסדות.',p:['ידע/כוח – מי שמגדיר "ידע" שולט. המוסר = כלי שליטה.','בתי כלא, חולים, ספר = מנגנוני מוסר/כפייה.','הנורמלי = מה שהכוח מגדיר.'],q:['"שם שיש כוח, שם יש התנגדות"'],s:'חושף שהמוסר = כלי כוח.'},
+harari:{n:'יובל נח הררי',d:'1976-',l:'ישראל',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Yuval_Noah_Harari_cropped.jpg/220px-Yuval_Noah_Harari_cropped.jpg',e:'📱',c:'var(--c9)',b:'"קיצור תולדות האנושות", "הומו דאוס".',p:['דאטא-איזם – היקום = זרימת מידע. חטא = חסימת זרימה.','קריסת ההומניזם – "הקשב לליבך" → "הקשב לנתונים".','האדם = אלגוריתם ביוכימי. אין "נשמה" מיסטית.','סיפורים בדויים – כסף, מדינות, מוסר = המצאות.'],q:['"הסמכות: מה אומרת התורה? → מה אני מרגיש? → מה הנתונים אומרים?"'],s:'חזרה להטרונומיה, רק שהמקור = אלגוריתם.'},
+bostrom:{n:'ניק בוסטרום',d:'1973-',l:'שוודיה → אוקספורד',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Nick_Bostrom_at_Summit_on_AI.jpg/220px-Nick_Bostrom_at_Summit_on_AI.jpg',e:'🧬',c:'var(--c9)',b:'פילוסוף. סיכונים אקזיסטנציאליים מ-AI.',p:['AI עלול לסכן את האנושות.','חובה מוסרית לשפר את האדם. הטבע אינו קדוש.','היפותזת הסימולציה.'],q:['"השאלה: לא אם AI יעלה על האדם, אלא מתי"'],s:'שאלות שהפילוסופיה לא חלמה עליהן.'},
+jonas:{n:'הנס יונאס',d:'1903-1993',l:'גרמניה → ארה"ב',e:'🌍',c:'var(--c9)',b:'תלמיד היידגר. "עיקרון האחריות" (1979).',p:['חובה שלא להרוס אפשרות לחיים בעתיד.','היוריסטיקה של הפחד – בספק, נבחר בזהירות.','אחריות לדורות שלא נולדו.'],q:['"עשה כך שתוצאות מעשיך יתיישבו עם הישרדות חיים אנושיים"'],s:'מרחיב מוסר מעבר לזמן הנוכחי – אחריות לעתיד.'},
+pasquale:{n:'פרנק פסקוואלה',d:'1972-',l:'ארה"ב',e:'📦',c:'var(--cE)',b:'משפטן. "החברה של הקופסה השחורה".',p:['אלגוריתמים קובעים גורלות בלי שאפשר לבדוק.','יחסנו ל-AI = יחס דתי. סומכים על "הפלט" כאמת.','חוסר שקיפות = אלימות בירוקרטית.'],q:['"מערכות אטומות קובעות את גורלנו"'],s:'חזרה למודל מסופוטמי: ציות לסמכות בלתי מובנת.'},
+zuboff:{n:'שושנה זובוף',d:'1951-',l:'ארה"ב',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Shoshana_Zuboff_-_9131603589.jpg/220px-Shoshana_Zuboff_-_9131603589.jpg',e:'👁️',c:'var(--cE)',b:'הרווארד. "עידן קפיטליזם המעקב".',p:['חוויה אנושית = חומר גלם חינמי. ניצול מידע.','האחר הגדול – מעקב שיודע-כל. כמו אלוהים לתאגידים.','לא רק צופה – גורמת לך לעשות מה שמשרת את התאגיד.'],q:['"חוויה אנושית כחומר גלם חינמי"'],s:'המעקב = שינוי תאולוגי. "אלוהים" שמנצל.'},
+kurzweil:{n:'ריי קורצווייל',d:'1948-',l:'ארה"ב',e:'⚡',c:'var(--cE)',b:'ממציא, עתידן, מהנדס ראשי בגוגל.',p:['הסינגולריות (~2045) – AI יעלה על האדם.','העלאת תודעה לענן = "חיי נצח" דיגיטליים.','אסכטולוגיה חילונית – "ביאת המשיח" טכנולוגית.'],q:['"המוות הוא טרגדיה – לא חלק בלתי נפרד מהחיים"'],s:'"נביא" הדת החדשה. סינגולריות = חזון משיחי.'},
+bridle:{n:'ג\'יימס בריידל',d:'1980-',l:'אנגליה',e:'🌑',c:'var(--cE)',b:'"עידן החושך החדש" (2018).',p:['חשיבה מאגית – סוגדים למה שלא מבינים.','Prompt = לחש שמפעיל ישות בלתי מובנת.','שיא הטכנולוגיה = שיא הבערות.','AI כעגל הזהב – יציר כפינו שמשתחווים לו.'],q:['"אפילו לא מבינים מה אנחנו לא מבינים"'],s:'שיא טכנולוגיה = שיא אלילות. הסכנה: ויתור על אנושיות.'}
+};
+
+function tgl(h){h.parentElement.classList.toggle('op')}
+function openM(id){
+const d=D[id];if(!d)return;
+const H=document.getElementById('mH'),B=document.getElementById('mB');
+const im=d.img?`<img src="${d.img}" alt="${d.n}" onerror="this.onerror=null;this.parentElement.innerHTML='${d.e}'">`:`${d.e}`;
+H.innerHTML=`<div class="ml-av" style="border-color:${d.c};background:#f5f0e8">${im}</div><div><h2 class="ml-nm" style="color:${d.c}">${d.n}</h2><p class="ml-dt">${d.d} · ${d.l}</p></div>`;
+B.innerHTML=`<div class="ml-sec"><h3>רקע ביוגרפי</h3><p>${d.b}</p></div><div class="ml-sec"><h3>עיקרי התפיסה</h3><ul>${d.p.map(x=>`<li>${x}</li>`).join('')}</ul></div>${d.q?`<div class="ml-sec"><h3>ציטוטים</h3>${d.q.map(x=>`<div class="ml-q">${x}</div>`).join('')}</div>`:''}<div class="ml-sec"><h3>משמעות והשפעה</h3><p>${d.s}</p></div>`;
+document.getElementById('mo').classList.add('act');document.body.style.overflow='hidden';
+}
+function closeM(){document.getElementById('mo').classList.remove('act');document.body.style.overflow=''}
+function toggleS(){const o=document.getElementById('sov');o.classList.toggle('act');document.body.style.overflow=o.classList.contains('act')?'hidden':''}
+function goTo(id){toggleS();setTimeout(()=>document.getElementById(id).scrollIntoView({behavior:'smooth'}),300)}
+
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.08});
+document.querySelectorAll('.era').forEach(el=>obs.observe(el));
+
+window.addEventListener('scroll',()=>{
+const t=document.getElementById('tnav'),f=document.getElementById('fnav'),hh=document.querySelector('.hero').offsetHeight;
+if(scrollY>hh){t.classList.add('vis');f.classList.remove('hid')}else{t.classList.remove('vis');f.classList.add('hid')}
+let cur='';document.querySelectorAll('.era,.epi').forEach(s=>{if(s.getBoundingClientRect().top<innerHeight/2)cur=s.id});
+document.querySelectorAll('.nd').forEach(d=>d.classList.toggle('act',d.dataset.t===cur));
+document.querySelectorAll('.tnav-l').forEach(l=>l.classList.toggle('act',l.getAttribute('href').substring(1)===cur));
+});
+document.querySelectorAll('.nd').forEach(d=>d.addEventListener('click',()=>{const t=document.getElementById(d.dataset.t);if(t)t.scrollIntoView({behavior:'smooth'})}));
+(function(){const c=document.getElementById('pts');for(let i=0;i<35;i++){const p=document.createElement('div');p.className='pt';p.style.left=Math.random()*100+'%';p.style.animationDelay=Math.random()*10+'s';p.style.animationDuration=(7+Math.random()*7)+'s';c.appendChild(p)}})();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeM();const s=document.getElementById('sov');if(s.classList.contains('act'))toggleS()}});
+</script>
+</body>
+</html>
