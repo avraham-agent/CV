@@ -1,0 +1,3011 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>מחולל קורות חיים מקצועי | CV Builder Pro</title>
+
+    <!-- SEO & Sharing Meta Tags -->
+    <meta name="description" content="בנה קורות חיים מקצועיים בעברית בקלות. 3 תבניות עיצוב, ייצוא PDF, שמירה אוטומטית. חינם ללא הרשמה.">
+    <meta name="keywords" content="קורות חיים, CV, resume, builder, מחולל, עברית, PDF">
+    <meta name="author" content="CV Builder Pro">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook, WhatsApp, Telegram, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CV Builder Pro — מחולל קורות חיים מקצועי">
+    <meta property="og:description" content="בנה קורות חיים מקצועיים בעברית תוך דקות. 3 תבניות עיצוב, ייצוא ל-PDF, שמירה אוטומטית. חינם!">
+    <meta property="og:locale" content="he_IL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CV Builder Pro — מחולל קורות חיים מקצועי">
+    <meta name="twitter:description" content="בנה קורות חיים מקצועיים בעברית תוך דקות. חינם!">
+
+    <!-- Mobile Web App -->
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CV Builder">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- DNS Prefetch fallback for older browsers -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- PWA Manifest (inline via data URI) -->
+    <link rel="manifest" id="pwa-manifest">
+    <script>
+        // Generate manifest dynamically as data URI for self-contained PWA
+        const pwaManifest = {
+            name: "CV Builder Pro — מחולל קורות חיים",
+            short_name: "CV Builder",
+            description: "בנה קורות חיים מקצועיים בעברית",
+            start_url: location.href,
+            display: "standalone",
+            orientation: "any",
+            dir: "rtl",
+            lang: "he",
+            background_color: "#f8fafc",
+            theme_color: "#0f172a",
+            categories: ["productivity", "utilities"],
+            icons: [
+                { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' text-anchor='middle' font-size='50'>📄</text></svg>", sizes: "any", type: "image/svg+xml", purpose: "any" },
+                { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' text-anchor='middle' font-size='50'>📄</text></svg>", sizes: "192x192", type: "image/svg+xml" },
+                { src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' text-anchor='middle' font-size='50'>📄</text></svg>", sizes: "512x512", type: "image/svg+xml" }
+            ]
+        };
+        const manifestBlob = new Blob([JSON.stringify(pwaManifest)], {type: 'application/json'});
+        document.getElementById('pwa-manifest').href = URL.createObjectURL(manifestBlob);
+    </script>
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' text-anchor='middle' font-size='50'>📄</text></svg>">
+
+    <!-- html2pdf with fallback -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // Fallback: if cdnjs fails, try jsdelivr
+        if (typeof html2pdf === 'undefined') {
+            document.write('<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"><\/script>');
+        }
+    </script>
+    <style>
+        /* Fallback fonts if Google Fonts fail to load */
+        @font-face {
+            font-family: 'Heebo';
+            font-style: normal;
+            font-weight: 300 900;
+            src: local('Heebo'), local('Arial Hebrew'), local('Arial');
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --primary-glow: rgba(37,99,235,0.15);
+            --secondary: #0f172a;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --success-light: #d1fae5;
+            --warning: #f59e0b;
+            --warning-light: #fef3c7;
+            --error: #ef4444;
+            --error-light: #fee2e2;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 20px -4px rgba(0,0,0,0.1), 0 4px 8px -4px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Heebo', 'Arial Hebrew', 'Segoe UI', Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, var(--gray-50) 50%, #f0fdf4 100%);
+            color: var(--gray-800);
+            line-height: 1.6;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            min-height: 100dvh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Safe areas for notched devices */
+        html {
+            padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) 0 env(safe-area-inset-left, 0);
+        }
+
+        /* ===== HEADER ===== */
+        .app-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e3a5f 50%, var(--primary-dark) 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            width: 46px; height: 46px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-text h1 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo-text p { font-size: 0.78rem; opacity: 0.7; font-weight: 300; }
+
+        .header-actions { display: flex; gap: 10px; align-items: center; }
+
+        .auto-save-indicator {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.75rem; opacity: 0.7;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 20px;
+        }
+        .auto-save-indicator .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--success);
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-container {
+            background: rgba(255,255,255,0.06);
+            padding: 14px 30px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .progress-inner { max-width: 1400px; margin: 0 auto; }
+
+        .progress-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .progress-step {
+            display: flex; align-items: center; gap: 8px;
+            padding: 10px 18px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 500;
+            transition: all var(--transition);
+            cursor: pointer;
+            background: rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.45);
+            border: 1px solid transparent;
+            font-family: 'Heebo', sans-serif;
+            min-height: 44px;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .progress-step:active { transform: scale(0.96); }
+
+        .progress-step.active {
+            background: rgba(255,255,255,0.18);
+            color: white;
+            border-color: rgba(255,255,255,0.15);
+            box-shadow: 0 0 20px rgba(37,99,235,0.3);
+        }
+        .progress-step.completed {
+            background: rgba(16,185,129,0.2);
+            color: #6ee7b7;
+            border-color: rgba(16,185,129,0.2);
+        }
+
+        .progress-step .step-num {
+            width: 28px; height: 28px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 700;
+            background: rgba(255,255,255,0.12);
+            flex-shrink: 0;
+            transition: all var(--transition);
+        }
+
+        .progress-step.active .step-num {
+            background: white; color: var(--primary-dark);
+            box-shadow: 0 0 12px rgba(255,255,255,0.3);
+        }
+        .progress-step.completed .step-num { background: var(--success); color: white; }
+
+        .progress-connector {
+            width: 24px; height: 2px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 1px;
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+        .progress-connector.active { background: rgba(16,185,129,0.5); }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 30px 120px;
+        }
+
+        .form-view { display: none; }
+        .form-view.active {
+            display: block;
+            animation: fadeSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+            animation: fadeSlideIn 0.5s 0.1s both;
+        }
+        .section-header h2 {
+            font-size: 1.75rem; font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, var(--gray-900), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-header p { color: var(--gray-500); font-size: 0.95rem; }
+
+        /* ===== FORM CARDS ===== */
+        .form-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+            transition: box-shadow var(--transition);
+            animation: fadeSlideIn 0.5s 0.15s both;
+        }
+        .form-card:hover { box-shadow: var(--shadow-md); }
+
+        .form-card-title {
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 5px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .form-card-title .icon { font-size: 1.3rem; }
+
+        .form-card-subtitle {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-grid.three-cols { grid-template-columns: repeat(3, 1fr); }
+
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: 1 / -1; }
+
+        .form-group label {
+            font-size: 0.85rem; font-weight: 600;
+            color: var(--gray-700); margin-bottom: 6px;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .form-group label .required { color: var(--error); font-size: 0.9rem; }
+        .form-group label .optional { color: var(--gray-400); font-size: 0.75rem; font-weight: 400; }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 13px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem;
+            color: var(--gray-800);
+            transition: all var(--transition);
+            background: var(--gray-50);
+            min-height: 48px;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px var(--primary-glow);
+        }
+
+        .form-group input.error-field {
+            border-color: var(--error);
+            box-shadow: 0 0 0 4px rgba(239,68,68,0.1);
+            animation: shakeField 0.4s ease;
+        }
+        @keyframes shakeField {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-4px); }
+            40%, 80% { transform: translateX(4px); }
+        }
+
+        .form-group textarea { resize: vertical; min-height: 110px; }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: var(--gray-400); }
+
+        /* ===== SPELLING ===== */
+        .spelling-suggestion {
+            display: none;
+            margin-top: 6px; padding: 10px 14px;
+            background: var(--warning-light); border: 1px solid #fde68a;
+            border-radius: var(--radius-sm); font-size: 0.82rem;
+            color: #92400e; cursor: pointer; transition: all 0.2s;
+        }
+        .spelling-suggestion:hover { background: #fef3c7; }
+        .spelling-suggestion.visible {
+            display: flex; align-items: center; gap: 6px;
+        }
+
+        /* ===== DYNAMIC ITEMS ===== */
+        .dynamic-list { display: flex; flex-direction: column; gap: 16px; }
+
+        .dynamic-item {
+            background: var(--gray-50);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            position: relative;
+            transition: all var(--transition);
+            animation: fadeSlideIn 0.35s both;
+        }
+        .dynamic-item:hover { border-color: var(--gray-300); box-shadow: var(--shadow-sm); }
+
+        .dynamic-item .item-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 18px;
+        }
+        .dynamic-item .item-number {
+            font-weight: 700; color: var(--primary);
+            font-size: 0.9rem;
+            background: var(--primary-light);
+            padding: 4px 14px;
+            border-radius: 20px;
+        }
+
+        .remove-item-btn {
+            background: none; border: none;
+            color: var(--gray-400); cursor: pointer;
+            padding: 8px; border-radius: 8px;
+            transition: all 0.2s; font-size: 1.2rem;
+            min-width: 40px; min-height: 40px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .remove-item-btn:hover { color: var(--error); background: var(--error-light); }
+
+        .add-item-btn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 8px; padding: 16px;
+            border: 2px dashed var(--gray-300);
+            border-radius: var(--radius);
+            background: none; color: var(--gray-500);
+            font-family: 'Heebo', sans-serif;
+            font-size: 0.9rem; font-weight: 600;
+            cursor: pointer; transition: all var(--transition); width: 100%;
+            margin-top: 16px;
+            min-height: 56px;
+        }
+        .add-item-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+        .add-item-btn:active { transform: scale(0.98); }
+
+        /* ===== SKILLS ===== */
+        .skills-input-container { display: flex; gap: 10px; margin-bottom: 15px; }
+        .skills-input-container input { flex: 1; }
+
+        .add-skill-btn {
+            padding: 12px 22px;
+            background: var(--primary); color: white;
+            border: none; border-radius: var(--radius-sm);
+            font-family: 'Heebo', sans-serif;
+            font-weight: 600; cursor: pointer;
+            transition: all var(--transition); white-space: nowrap;
+            min-height: 48px;
+            font-size: 0.95rem;
+        }
+        .add-skill-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .add-skill-btn:active { transform: scale(0.97); }
+
+        .skills-tags { display: flex; flex-wrap: wrap; gap: 8px; min-height: 10px; }
+
+        .skill-tag {
+            display: flex; align-items: center; gap: 6px;
+            padding: 8px 16px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 22px;
+            font-size: 0.88rem; font-weight: 500;
+            animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.2s;
+        }
+        .skill-tag:hover { box-shadow: 0 2px 8px rgba(37,99,235,0.2); }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.7); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .skill-tag .remove-skill {
+            cursor: pointer; font-size: 1rem;
+            line-height: 1; opacity: 0.6; transition: opacity 0.2s;
+            padding: 2px;
+        }
+        .skill-tag .remove-skill:hover { opacity: 1; }
+
+        .skill-suggestion-chip {
+            padding: 6px 14px;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: 18px;
+            font-size: 0.82rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Heebo', sans-serif;
+        }
+        .skill-suggestion-chip:hover {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ===== NAV BUTTONS ===== */
+        .nav-buttons {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-top: 30px; padding-top: 20px;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 14px 32px; border-radius: var(--radius-sm);
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem; font-weight: 600;
+            cursor: pointer; transition: all var(--transition);
+            display: flex; align-items: center; gap: 8px;
+            border: none;
+            min-height: 52px;
+            -webkit-user-select: none;
+            user-select: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:active { transform: scale(0.97); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+        }
+
+        .btn-secondary {
+            background: white; color: var(--gray-700);
+            border: 2px solid var(--gray-300);
+        }
+        .btn-secondary:hover { border-color: var(--gray-400); background: var(--gray-50); }
+
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            box-shadow: 0 4px 14px rgba(16,185,129,0.3);
+            font-size: 1.05rem;
+            padding: 16px 40px;
+        }
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16,185,129,0.4);
+        }
+
+        .btn-outline-primary {
+            background: white; color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline-primary:hover { background: var(--primary-light); }
+
+        /* ===== MOBILE BOTTOM NAV ===== */
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: white;
+            padding: 10px 16px;
+            padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 200;
+            gap: 10px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .mobile-bottom-nav .btn { flex: 1; justify-content: center; min-height: 50px; font-size: 0.95rem; }
+
+        /* ===== PREVIEW ===== */
+        .preview-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 25px; align-items: start;
+        }
+
+        .preview-sidebar {
+            position: sticky; top: 160px;
+            display: flex; flex-direction: column; gap: 14px;
+        }
+
+        .sidebar-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+        }
+        .sidebar-card h3 {
+            font-size: 0.92rem; font-weight: 700;
+            margin-bottom: 14px; color: var(--gray-800);
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .color-options { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+
+        .color-option {
+            width: 36px; height: 36px; border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .color-option:hover { transform: scale(1.15); }
+        .color-option.selected {
+            border-color: var(--gray-800);
+            box-shadow: 0 0 0 2px white, 0 0 0 4px var(--gray-400);
+        }
+
+        .template-options { display: flex; flex-direction: column; gap: 8px; }
+
+        .template-option {
+            padding: 12px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; gap: 10px;
+            background: white;
+        }
+        .template-option:hover { border-color: var(--gray-300); }
+        .template-option.selected { border-color: var(--primary); background: var(--primary-light); }
+
+        .template-option .template-icon {
+            width: 40px; height: 50px; border-radius: 4px;
+            border: 1px solid var(--gray-300);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.6rem; background: white;
+        }
+        .template-option .template-name { font-weight: 600; font-size: 0.85rem; }
+        .template-option .template-desc { font-size: 0.75rem; color: var(--gray-500); }
+
+        .font-size-control { display: flex; align-items: center; gap: 10px; }
+        .font-size-control button {
+            width: 40px; height: 40px; border-radius: 8px;
+            border: 2px solid var(--gray-200); background: white;
+            cursor: pointer; font-size: 1.2rem;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+            font-family: 'Heebo', sans-serif;
+        }
+        .font-size-control button:hover { border-color: var(--primary); color: var(--primary); }
+        .font-size-control span { font-weight: 600; min-width: 40px; text-align: center; }
+
+        .download-section { display: flex; flex-direction: column; gap: 10px; }
+
+        .download-btn {
+            width: 100%; padding: 14px; border-radius: var(--radius-sm);
+            font-family: 'Heebo', sans-serif;
+            font-weight: 700; font-size: 0.95rem;
+            cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+            gap: 8px; border: none;
+            min-height: 52px;
+        }
+        .download-pdf {
+            background: linear-gradient(135deg, var(--error), #dc2626);
+            color: white;
+            box-shadow: 0 4px 14px rgba(239,68,68,0.3);
+        }
+        .download-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(239,68,68,0.4);
+        }
+
+        .cv-preview-wrapper {
+            background: var(--gray-200);
+            border-radius: var(--radius);
+            padding: 30px;
+            display: flex; justify-content: center;
+            min-height: 800px;
+        }
+
+        .cv-preview {
+            width: 210mm; min-height: 297mm;
+            background: white;
+            box-shadow: var(--shadow-xl);
+            border-radius: 2px;
+            overflow: hidden;
+            transform-origin: top center;
+        }
+
+        .cv-content {
+            padding: 0;
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+        }
+
+        /* ===== CV TEMPLATE: CLASSIC ===== */
+        .cv-content.template-classic .cv-header-section {
+            padding: 40px 45px 30px;
+            border-bottom: 3px solid var(--cv-color, #2563eb);
+        }
+        .cv-content.template-classic .cv-name {
+            font-size: 28px; font-weight: 800;
+            color: var(--cv-color, #2563eb);
+            margin-bottom: 4px; letter-spacing: -0.5px;
+        }
+        .cv-content.template-classic .cv-title {
+            font-size: 15px; color: var(--gray-600);
+            font-weight: 400; margin-bottom: 15px;
+        }
+        .cv-content.template-classic .cv-contact-row {
+            display: flex; flex-wrap: wrap; gap: 20px;
+            font-size: 12px; color: var(--gray-600);
+        }
+        .cv-content.template-classic .cv-contact-item { display: flex; align-items: center; gap: 6px; }
+        .cv-content.template-classic .cv-body-section { padding: 25px 45px; }
+        .cv-content.template-classic .cv-section { margin-bottom: 22px; }
+        .cv-content.template-classic .cv-section-title {
+            font-size: 15px; font-weight: 700;
+            color: var(--cv-color, #2563eb);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 14px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .cv-content.template-classic .cv-entry { margin-bottom: 16px; }
+        .cv-content.template-classic .cv-entry-header {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; margin-bottom: 4px;
+        }
+        .cv-content.template-classic .cv-entry-title { font-size: 13.5px; font-weight: 700; color: var(--gray-900); }
+        .cv-content.template-classic .cv-entry-subtitle { font-size: 12.5px; color: var(--gray-600); font-weight: 500; }
+        .cv-content.template-classic .cv-entry-date { font-size: 11.5px; color: var(--gray-500); white-space: nowrap; }
+        .cv-content.template-classic .cv-entry-desc { font-size: 12px; color: var(--gray-700); line-height: 1.7; margin-top: 4px; }
+        .cv-content.template-classic .cv-skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cv-content.template-classic .cv-skill-item {
+            padding: 5px 14px; background: var(--gray-100);
+            border-radius: 15px; font-size: 11.5px;
+            color: var(--gray-700); font-weight: 500;
+        }
+
+        /* ===== CV TEMPLATE: MODERN ===== */
+        .cv-content.template-modern {
+            display: grid; grid-template-columns: 200px 1fr;
+            min-height: 297mm;
+        }
+        .cv-content.template-modern .cv-sidebar {
+            background: var(--cv-color, #2563eb);
+            color: white; padding: 35px 20px;
+        }
+        .cv-content.template-modern .cv-sidebar .cv-name { font-size: 22px; font-weight: 800; margin-bottom: 4px; line-height: 1.3; }
+        .cv-content.template-modern .cv-sidebar .cv-title { font-size: 12px; opacity: 0.85; margin-bottom: 25px; font-weight: 300; }
+        .cv-content.template-modern .cv-sidebar .sidebar-section { margin-bottom: 22px; }
+        .cv-content.template-modern .cv-sidebar .sidebar-section-title {
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+            opacity: 0.8; margin-bottom: 10px; padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+        .cv-content.template-modern .cv-sidebar .sidebar-item {
+            font-size: 11px; margin-bottom: 8px; opacity: 0.9;
+            display: flex; align-items: center; gap: 8px; line-height: 1.5;
+        }
+        .cv-content.template-modern .cv-sidebar .cv-skill-item {
+            padding: 4px 10px; background: rgba(255,255,255,0.15);
+            border-radius: 12px; font-size: 10.5px;
+            display: inline-block; margin: 0 3px 6px 0;
+        }
+        .cv-content.template-modern .cv-main { padding: 35px 35px; }
+        .cv-content.template-modern .cv-section { margin-bottom: 22px; }
+        .cv-content.template-modern .cv-section-title {
+            font-size: 14px; font-weight: 700;
+            color: var(--cv-color, #2563eb);
+            margin-bottom: 14px; padding-bottom: 6px;
+            border-bottom: 2px solid var(--gray-200);
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .cv-content.template-modern .cv-entry {
+            margin-bottom: 16px; padding-right: 15px;
+            border-right: 3px solid var(--gray-200);
+        }
+        .cv-content.template-modern .cv-entry-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .cv-content.template-modern .cv-entry-title { font-size: 13px; font-weight: 700; color: var(--gray-900); }
+        .cv-content.template-modern .cv-entry-subtitle { font-size: 12px; color: var(--gray-600); }
+        .cv-content.template-modern .cv-entry-date { font-size: 11px; color: var(--gray-500); }
+        .cv-content.template-modern .cv-entry-desc { font-size: 11.5px; color: var(--gray-600); line-height: 1.7; margin-top: 4px; }
+
+        /* ===== CV TEMPLATE: MINIMAL ===== */
+        .cv-content.template-minimal .cv-header-section { padding: 45px 50px 25px; text-align: center; }
+        .cv-content.template-minimal .cv-name {
+            font-size: 30px; font-weight: 300; color: var(--gray-900);
+            letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .cv-content.template-minimal .cv-title {
+            font-size: 13px; color: var(--cv-color, #2563eb);
+            font-weight: 500; letter-spacing: 2px; margin-bottom: 18px;
+        }
+        .cv-content.template-minimal .cv-contact-row {
+            display: flex; justify-content: center; flex-wrap: wrap;
+            gap: 18px; font-size: 11.5px; color: var(--gray-500);
+        }
+        .cv-content.template-minimal .cv-divider {
+            width: 60px; height: 2px;
+            background: var(--cv-color, #2563eb);
+            margin: 20px auto;
+        }
+        .cv-content.template-minimal .cv-body-section { padding: 0 50px 40px; }
+        .cv-content.template-minimal .cv-section { margin-bottom: 24px; }
+        .cv-content.template-minimal .cv-section-title {
+            font-size: 12px; font-weight: 600;
+            color: var(--cv-color, #2563eb);
+            text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 15px; text-align: center;
+        }
+        .cv-content.template-minimal .cv-entry { margin-bottom: 16px; }
+        .cv-content.template-minimal .cv-entry-header { display: flex; justify-content: space-between; margin-bottom: 3px; }
+        .cv-content.template-minimal .cv-entry-title { font-size: 13px; font-weight: 600; color: var(--gray-800); }
+        .cv-content.template-minimal .cv-entry-subtitle { font-size: 12px; color: var(--gray-500); }
+        .cv-content.template-minimal .cv-entry-date { font-size: 11px; color: var(--gray-400); }
+        .cv-content.template-minimal .cv-entry-desc { font-size: 11.5px; color: var(--gray-600); line-height: 1.8; }
+        .cv-content.template-minimal .cv-skills-list {
+            display: flex; flex-wrap: wrap;
+            justify-content: center; gap: 10px;
+        }
+        .cv-content.template-minimal .cv-skill-item {
+            font-size: 11px; color: var(--gray-600);
+            padding: 4px 16px; border: 1px solid var(--gray-300); border-radius: 20px;
+        }
+
+        /* ===== SUGGESTIONS ===== */
+        .suggestions-panel {
+            background: white; border-radius: var(--radius);
+            padding: 20px; box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+        }
+
+        .suggestion-item {
+            padding: 12px; margin-bottom: 8px; border-radius: var(--radius-sm);
+            background: #fffbeb; border: 1px solid #fde68a;
+            display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem;
+        }
+        .suggestion-item.info { background: #eff6ff; border-color: #bfdbfe; }
+        .suggestion-item .suggestion-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+        .suggestion-item .suggestion-text { flex: 1; }
+
+        .suggestion-item .apply-suggestion {
+            padding: 6px 14px; background: white;
+            border: 1px solid var(--gray-300); border-radius: 6px;
+            font-size: 0.78rem; cursor: pointer; white-space: nowrap;
+            font-family: 'Heebo', sans-serif; font-weight: 600; transition: all 0.2s;
+            min-height: 36px;
+        }
+        .suggestion-item .apply-suggestion:hover { background: var(--gray-100); }
+
+        /* ===== TOGGLE ADVANCED ===== */
+        .toggle-advanced {
+            display: flex; align-items: center; gap: 10px;
+            padding: 15px 0; cursor: pointer;
+            color: var(--primary); font-weight: 600; font-size: 0.92rem;
+            border: none; background: none; font-family: 'Heebo', sans-serif;
+            min-height: 48px;
+        }
+        .toggle-advanced:hover { color: var(--primary-dark); }
+
+        .advanced-fields { display: none; animation: fadeSlideIn 0.35s ease; }
+        .advanced-fields.visible { display: block; }
+
+        /* ===== EDITABLE IN PREVIEW ===== */
+        .cv-preview [contenteditable="true"] { outline: none; cursor: text; }
+        .cv-preview [contenteditable="true"]:hover { background: rgba(37,99,235,0.05); border-radius: 3px; }
+        .cv-preview [contenteditable="true"]:focus { background: rgba(37,99,235,0.08); box-shadow: inset 0 0 0 1px rgba(37,99,235,0.3); border-radius: 3px; }
+
+        .edit-hint {
+            text-align: center; padding: 12px;
+            background: #eff6ff; border-radius: var(--radius-sm);
+            font-size: 0.82rem; color: var(--primary);
+        }
+
+        /* ===== LOADING ===== */
+        .loading-overlay {
+            display: none; position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); z-index: 1000;
+            align-items: center; justify-content: center;
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+        }
+        .loading-overlay.active { display: flex; }
+
+        .loading-content {
+            background: white; padding: 40px 50px;
+            border-radius: 20px; text-align: center;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .spinner {
+            width: 50px; height: 50px;
+            border: 4px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .char-count { text-align: left; font-size: 0.75rem; color: var(--gray-400); margin-top: 4px; }
+        .char-count.warning { color: var(--warning); }
+        .char-count.error { color: var(--error); }
+
+        /* ===== TOAST ===== */
+        .toast-container {
+            position: fixed; top: 20px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            display: flex; flex-direction: column; gap: 10px;
+            pointer-events: none;
+            width: 90%; max-width: 420px;
+        }
+
+        .toast {
+            padding: 14px 22px;
+            border-radius: var(--radius-sm);
+            color: white; font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            display: flex; align-items: center; gap: 10px;
+            animation: toastIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: auto;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+        .toast.success { background: linear-gradient(135deg, var(--success), #059669); }
+        .toast.error { background: linear-gradient(135deg, var(--error), #dc2626); }
+        .toast.info { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        .toast.warning { background: linear-gradient(135deg, var(--warning), #d97706); }
+
+        .toast.fadeOut { animation: toastOut 0.35s ease forwards; }
+
+        @keyframes toastIn {
+            from { opacity: 0; transform: translateY(-20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes toastOut {
+            to { opacity: 0; transform: translateY(-20px) scale(0.9); }
+        }
+
+        /* ===== STEP INDICATOR (MOBILE) ===== */
+        .mobile-step-label {
+            display: none;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 500;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .preview-container { grid-template-columns: 1fr; }
+            .preview-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+            .cv-preview-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        }
+
+        @media (max-width: 768px) {
+            .header-content { padding: 12px 16px; }
+            .logo-icon { width: 38px; height: 38px; font-size: 18px; border-radius: 10px; }
+            .logo-text h1 { font-size: 1.15rem; }
+            .logo-text p { display: none; }
+            .auto-save-indicator span:not(.dot) { display: none; }
+            .auto-save-indicator { padding: 6px 8px; }
+
+            .progress-container { padding: 10px 12px; }
+            .progress-steps { gap: 3px; justify-content: space-between; overflow-x: visible; }
+            .progress-step {
+                padding: 8px 10px;
+                font-size: 0.78rem;
+                flex: 1;
+                justify-content: center;
+                min-height: 42px;
+            }
+            .progress-step .step-label { display: none; }
+            .progress-step .step-num { width: 26px; height: 26px; font-size: 0.7rem; }
+            .progress-connector { width: 8px; }
+            .mobile-step-label { display: block; }
+
+            .main-content { padding: 20px 14px 140px; }
+
+            .form-card { padding: 20px 16px; border-radius: 14px; }
+            .form-grid,
+            .form-grid.three-cols { grid-template-columns: 1fr; gap: 14px; }
+
+            .section-header h2 { font-size: 1.35rem; }
+            .section-header p { font-size: 0.85rem; }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select { font-size: 16px; padding: 14px 16px; } /* 16px prevents iOS zoom */
+
+            .nav-buttons { display: none; } /* Hidden on mobile - using bottom nav */
+            .mobile-bottom-nav { display: flex; }
+
+            .dynamic-item { padding: 18px 14px; }
+            .skills-input-container { flex-direction: column; }
+            .add-skill-btn { width: 100%; justify-content: center; }
+
+            .cv-preview-wrapper {
+                padding: 12px; border-radius: 12px;
+                -webkit-overflow-scrolling: touch;
+            }
+            .cv-preview {
+                width: 100%;
+                min-height: auto;
+                transform: none !important;
+                font-size: 10px;
+            }
+            .cv-content.template-modern { grid-template-columns: 140px 1fr; }
+            .cv-content.template-modern .cv-sidebar { padding: 20px 12px; }
+            .cv-content.template-modern .cv-sidebar .cv-name { font-size: 16px; }
+            .cv-content.template-modern .cv-main { padding: 20px 16px; }
+            .cv-content.template-classic .cv-header-section,
+            .cv-content.template-minimal .cv-header-section { padding: 24px 20px 18px; }
+            .cv-content.template-classic .cv-body-section,
+            .cv-content.template-minimal .cv-body-section { padding: 18px 20px; }
+            .cv-content.template-classic .cv-name { font-size: 22px; }
+            .cv-content.template-minimal .cv-name { font-size: 22px; letter-spacing: 1px; }
+
+            .preview-sidebar {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .sidebar-card { padding: 14px; }
+        }
+
+        @media (max-width: 400px) {
+            .main-content { padding: 14px 10px 140px; }
+            .form-card { padding: 16px 12px; }
+            .dynamic-item { padding: 14px 10px; }
+            .progress-step { padding: 6px 6px; min-height: 38px; }
+            .progress-step .step-num { width: 24px; height: 24px; font-size: 0.65rem; }
+            .progress-connector { width: 5px; }
+            .btn { padding: 12px 20px; font-size: 0.9rem; min-height: 48px; }
+            .preview-sidebar { grid-template-columns: 1fr; }
+        }
+
+        /* Landscape phone */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .app-header { position: relative; } /* Unpin header in landscape to save vertical space */
+            .progress-container { padding: 6px 12px; }
+            .mobile-step-label { display: none; }
+            .main-content { padding: 14px 20px 100px; }
+            .mobile-bottom-nav { padding: 6px 16px; }
+            .mobile-bottom-nav .btn { min-height: 42px; }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .app-header, .mobile-bottom-nav, .toast-container,
+            .preview-sidebar, .suggestions-panel, .loading-overlay,
+            .install-banner, .share-fab { display: none !important; }
+            .main-content { padding: 0; max-width: none; }
+            .preview-container { display: block; }
+            .cv-preview-wrapper { background: none; padding: 0; }
+            .cv-preview { box-shadow: none; width: 100%; }
+            body { background: white; }
+        }
+
+        /* ===== INSTALL APP BANNER ===== */
+        .install-banner {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
+            color: white;
+            padding: 14px 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            z-index: 300;
+            max-width: 380px;
+            width: calc(100% - 32px);
+            animation: slideUpBanner 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .install-banner.visible { display: block; }
+        @keyframes slideUpBanner {
+            from { opacity: 0; transform: translateX(-50%) translateY(30px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .install-banner-content {
+            display: flex; align-items: center; gap: 14px;
+        }
+        .install-banner-icon {
+            font-size: 2rem; flex-shrink: 0;
+        }
+        .install-banner-text h4 {
+            font-size: 0.9rem; font-weight: 700; margin-bottom: 2px;
+        }
+        .install-banner-text p {
+            font-size: 0.78rem; opacity: 0.8; font-weight: 300; line-height: 1.4;
+        }
+        .install-banner-actions {
+            display: flex; gap: 8px; margin-top: 12px;
+        }
+        .install-banner-actions button {
+            padding: 8px 18px; border-radius: 10px;
+            font-family: 'Heebo', sans-serif;
+            font-size: 0.82rem; font-weight: 600;
+            cursor: pointer; border: none;
+            transition: all 0.2s;
+            min-height: 38px;
+        }
+        .install-btn-primary {
+            background: white; color: var(--primary-dark);
+        }
+        .install-btn-primary:hover { background: var(--gray-100); }
+        .install-btn-dismiss {
+            background: rgba(255,255,255,0.15); color: white;
+        }
+        .install-btn-dismiss:hover { background: rgba(255,255,255,0.25); }
+
+        /* ===== SHARE FAB ===== */
+        .share-fab {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            left: 16px;
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+            cursor: pointer;
+            z-index: 190;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center; justify-content: center;
+            transition: all 0.3s;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .share-fab:active { transform: scale(0.9); }
+        .share-fab:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,99,235,0.5); }
+        @media (min-width: 769px) {
+            .share-fab { display: none !important; }
+        }
+        @media (max-width: 768px) {
+            .share-fab { display: flex; }
+        }
+
+        /* ===== HEADER SHARE BUTTON (Desktop) ===== */
+        .header-share-btn {
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Heebo', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex; align-items: center; gap: 6px;
+            transition: all 0.2s;
+            min-height: 38px;
+        }
+        .header-share-btn:hover { background: rgba(255,255,255,0.2); }
+        @media (max-width: 768px) {
+            .header-share-btn span.share-label { display: none; }
+            .header-share-btn { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<header class="app-header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo-icon">📄</div>
+            <div class="logo-text">
+                <h1>CV Builder Pro</h1>
+                <p>מחולל קורות חיים מקצועי</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="header-share-btn" onclick="shareApp()" title="שתף את האפליקציה">
+                📤 <span class="share-label">שתף</span>
+            </button>
+            <div class="auto-save-indicator" id="autoSaveIndicator">
+                <span class="dot"></span>
+                <span>נשמר אוטומטית</span>
+            </div>
+        </div>
+    </div>
+    <div class="progress-container">
+        <div class="progress-inner">
+            <div class="progress-steps" id="progressSteps">
+                <button class="progress-step active" data-step="1" onclick="handleStepClick(1)">
+                    <span class="step-num">1</span>
+                    <span class="step-label">פרטים אישיים</span>
+                </button>
+                <div class="progress-connector"></div>
+                <button class="progress-step" data-step="2" onclick="handleStepClick(2)">
+                    <span class="step-num">2</span>
+                    <span class="step-label">ניסיון</span>
+                </button>
+                <div class="progress-connector"></div>
+                <button class="progress-step" data-step="3" onclick="handleStepClick(3)">
+                    <span class="step-num">3</span>
+                    <span class="step-label">השכלה</span>
+                </button>
+                <div class="progress-connector"></div>
+                <button class="progress-step" data-step="4" onclick="handleStepClick(4)">
+                    <span class="step-num">4</span>
+                    <span class="step-label">כישורים</span>
+                </button>
+                <div class="progress-connector"></div>
+                <button class="progress-step" data-step="5" onclick="handleStepClick(5)">
+                    <span class="step-num">5</span>
+                    <span class="step-label">תצוגה</span>
+                </button>
+            </div>
+            <div class="mobile-step-label" id="mobileStepLabel">שלב 1 מתוך 5 — פרטים אישיים</div>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- Step 1 -->
+    <div class="form-view active" id="step1">
+        <div class="section-header">
+            <h2>👤 פרטים אישיים</h2>
+            <p>מלא את הפרטים הבסיסיים שלך</p>
+        </div>
+
+        <div class="form-card">
+            <div class="form-card-title"><span class="icon">📋</span> פרטים בסיסיים</div>
+            <div class="form-card-subtitle">שדות המסומנים ב-* הם שדות חובה</div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>שם פרטי <span class="required">*</span></label>
+                    <input type="text" id="firstName" placeholder="למשל: ישראל" oninput="checkSpelling(this); autoSave()">
+                    <div class="spelling-suggestion" id="firstName-suggestion"></div>
+                </div>
+                <div class="form-group">
+                    <label>שם משפחה <span class="required">*</span></label>
+                    <input type="text" id="lastName" placeholder="למשל: ישראלי" oninput="checkSpelling(this); autoSave()">
+                    <div class="spelling-suggestion" id="lastName-suggestion"></div>
+                </div>
+                <div class="form-group">
+                    <label>כותרת מקצועית <span class="required">*</span></label>
+                    <input type="text" id="jobTitle" placeholder="למשל: מפתח Full Stack" oninput="autoSave()">
+                    <div class="spelling-suggestion" id="jobTitle-suggestion"></div>
+                </div>
+                <div class="form-group">
+                    <label>טלפון <span class="required">*</span></label>
+                    <input type="tel" id="phone" placeholder="050-1234567" dir="ltr" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>אימייל <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="example@email.com" dir="ltr" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>עיר מגורים <span class="required">*</span></label>
+                    <input type="text" id="city" placeholder="למשל: תל אביב" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="form-card-title"><span class="icon">📝</span> תקציר מקצועי</div>
+            <div class="form-card-subtitle">סיכום קצר של הניסיון והיכולות שלך (2-4 משפטים)</div>
+            <div class="form-group full-width">
+                <label>תקציר <span class="optional">(מומלץ מאוד)</span></label>
+                <textarea id="summary" placeholder="למשל: מפתח Full Stack עם 5 שנות ניסיון בפיתוח אפליקציות ווב. מתמחה בטכנולוגיות React, Node.js ו-Python. בעל יכולת עבודה בצוות ויכולת למידה עצמית גבוהה." rows="4" oninput="updateCharCount(this); checkSpelling(this); autoSave()"></textarea>
+                <div class="char-count" id="summaryCharCount">0 / 300 תווים</div>
+                <div class="spelling-suggestion" id="summary-suggestion"></div>
+            </div>
+        </div>
+
+        <button class="toggle-advanced" onclick="toggleAdvanced('personalAdvanced')">
+            ⚙️ פרטים נוספים (אופציונלי)
+            <span id="personalAdvancedArrow">◀</span>
+        </button>
+        <div class="advanced-fields" id="personalAdvanced">
+            <div class="form-card">
+                <div class="form-card-title"><span class="icon">🔗</span> פרטים נוספים</div>
+                <div class="form-card-subtitle">קישורים ופרטים שיכולים לחזק את קורות החיים</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>לינקדאין <span class="optional">(אופציונלי)</span></label>
+                        <input type="url" id="linkedin" placeholder="linkedin.com/in/username" dir="ltr" oninput="autoSave()">
+                    </div>
+                    <div class="form-group">
+                        <label>אתר אישי / פורטפוליו <span class="optional">(אופציונלי)</span></label>
+                        <input type="url" id="website" placeholder="www.mywebsite.com" dir="ltr" oninput="autoSave()">
+                    </div>
+                    <div class="form-group">
+                        <label>GitHub <span class="optional">(אופציונלי)</span></label>
+                        <input type="url" id="github" placeholder="github.com/username" dir="ltr" oninput="autoSave()">
+                    </div>
+                    <div class="form-group">
+                        <label>תאריך לידה <span class="optional">(אופציונלי)</span></label>
+                        <input type="date" id="birthDate" oninput="autoSave()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <div></div>
+            <button class="btn btn-primary" onclick="navigateToStep(2)">
+                המשך לניסיון תעסוקתי <span>←</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="form-view" id="step2">
+        <div class="section-header">
+            <h2>💼 ניסיון תעסוקתי</h2>
+            <p>הוסף את מקומות העבודה שלך, מהאחרון לראשון</p>
+        </div>
+
+        <div class="form-card">
+            <div class="dynamic-list" id="experienceList">
+                <div class="dynamic-item" data-index="0">
+                    <div class="item-header">
+                        <span class="item-number">משרה #1</span>
+                        <button class="remove-item-btn" onclick="removeItem('experienceList', this)" title="הסר">✕</button>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>תפקיד <span class="required">*</span></label>
+                            <input type="text" class="exp-role" placeholder="למשל: מפתח Frontend" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>חברה / מעסיק <span class="required">*</span></label>
+                            <input type="text" class="exp-company" placeholder="למשל: חברת הייטק בע״מ" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>תאריך התחלה</label>
+                            <input type="month" class="exp-start" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>תאריך סיום</label>
+                            <div style="display:flex;gap:10px;align-items:center;">
+                                <input type="month" class="exp-end" style="flex:1" oninput="autoSave()">
+                                <label style="font-size:0.8rem;white-space:nowrap;margin:0;min-height:44px;display:flex;align-items:center;">
+                                    <input type="checkbox" class="exp-current" onchange="toggleCurrent(this); autoSave()" style="width:18px;height:18px;margin-left:4px;"> עד היום
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>תיאור התפקיד והישגים</label>
+                            <textarea class="exp-desc" placeholder="תאר את תחומי האחריות וההישגים המרכזיים שלך. נסה לכלול מספרים ותוצאות מדידות." rows="4" oninput="checkSpelling(this); autoSave()"></textarea>
+                            <div class="spelling-suggestion"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-item-btn" onclick="addExperience()">
+                <span>+</span> הוסף משרה נוספת
+            </button>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="navigateToStep(1)"><span>→</span> חזרה</button>
+            <button class="btn btn-primary" onclick="navigateToStep(3)">המשך להשכלה <span>←</span></button>
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="form-view" id="step3">
+        <div class="section-header">
+            <h2>🎓 השכלה</h2>
+            <p>הוסף את ההשכלה שלך</p>
+        </div>
+
+        <div class="form-card">
+            <div class="dynamic-list" id="educationList">
+                <div class="dynamic-item" data-index="0">
+                    <div class="item-header">
+                        <span class="item-number">השכלה #1</span>
+                        <button class="remove-item-btn" onclick="removeItem('educationList', this)" title="הסר">✕</button>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>תואר / תעודה <span class="required">*</span></label>
+                            <input type="text" class="edu-degree" placeholder="למשל: תואר ראשון במדעי המחשב" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>מוסד לימודים <span class="required">*</span></label>
+                            <input type="text" class="edu-school" placeholder="למשל: אוניברסיטת תל אביב" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>שנת התחלה</label>
+                            <input type="number" class="edu-start" placeholder="2018" min="1970" max="2030" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>שנת סיום</label>
+                            <input type="number" class="edu-end" placeholder="2022" min="1970" max="2030" oninput="autoSave()">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>פרטים נוספים <span class="optional">(אופציונלי)</span></label>
+                            <textarea class="edu-desc" placeholder="ממוצע ציונים, התמחות, פרויקט גמר, הצטיינות וכו'" rows="2" oninput="autoSave()"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-item-btn" onclick="addEducation()">
+                <span>+</span> הוסף השכלה נוספת
+            </button>
+        </div>
+
+        <button class="toggle-advanced" onclick="toggleAdvanced('militaryAdvanced')">
+            🎖️ שירות צבאי / לאומי (אופציונלי)
+            <span id="militaryAdvancedArrow">◀</span>
+        </button>
+        <div class="advanced-fields" id="militaryAdvanced">
+            <div class="form-card">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>תפקיד</label>
+                        <input type="text" id="militaryRole" placeholder="למשל: קצין טכנולוגיות" oninput="autoSave()">
+                    </div>
+                    <div class="form-group">
+                        <label>יחידה</label>
+                        <input type="text" id="militaryUnit" placeholder="למשל: חיל המודיעין" oninput="autoSave()">
+                    </div>
+                    <div class="form-group">
+                        <label>שנים</label>
+                        <input type="text" id="militaryYears" placeholder="למשל: 2015-2018" oninput="autoSave()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="navigateToStep(2)"><span>→</span> חזרה</button>
+            <button class="btn btn-primary" onclick="navigateToStep(4)">המשך לכישורים <span>←</span></button>
+        </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="form-view" id="step4">
+        <div class="section-header">
+            <h2>🛠️ כישורים ושפות</h2>
+            <p>הוסף את הכישורים המקצועיים והשפות שאתה שולט בהן</p>
+        </div>
+
+        <div class="form-card">
+            <div class="form-card-title"><span class="icon">💡</span> כישורים מקצועיים</div>
+            <div class="form-card-subtitle">הוסף כישורים רלוונטיים לתפקיד שאתה מחפש</div>
+            <div class="skills-input-container">
+                <input type="text" id="skillInput" placeholder="הקלד כישור ולחץ הוסף" onkeypress="if(event.key==='Enter'){event.preventDefault();addSkill();}">
+                <button class="add-skill-btn" onclick="addSkill()">+ הוסף</button>
+            </div>
+            <div class="skills-tags" id="skillsTags"></div>
+            <div style="margin-top:15px;">
+                <p style="font-size:0.82rem;color:var(--gray-500);">💡 הצעות:</p>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;" id="skillSuggestions">
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">Excel</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">Word</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">PowerPoint</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">עבודת צוות</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">ניהול זמן</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">פתרון בעיות</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">תקשורת בינאישית</span>
+                    <span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">יכולת למידה עצמית</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="form-card-title"><span class="icon">🌍</span> שפות</div>
+            <div class="form-card-subtitle">ציין את השפות ורמת השליטה שלך</div>
+            <div class="dynamic-list" id="languagesList">
+                <div class="dynamic-item" data-index="0">
+                    <div class="form-grid three-cols">
+                        <div class="form-group">
+                            <label>שפה</label>
+                            <input type="text" class="lang-name" value="עברית" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>רמה</label>
+                            <select class="lang-level" onchange="autoSave()">
+                                <option value="שפת אם" selected>שפת אם</option>
+                                <option value="רמה גבוהה מאוד">רמה גבוהה מאוד</option>
+                                <option value="רמה גבוהה">רמה גבוהה</option>
+                                <option value="רמה בינונית">רמה בינונית</option>
+                                <option value="רמה בסיסית">רמה בסיסית</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="align-items:flex-end;">
+                            <button class="remove-item-btn" onclick="removeItem('languagesList', this.closest('.dynamic-item'))" title="הסר">✕</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dynamic-item" data-index="1">
+                    <div class="form-grid three-cols">
+                        <div class="form-group">
+                            <label>שפה</label>
+                            <input type="text" class="lang-name" value="אנגלית" oninput="autoSave()">
+                        </div>
+                        <div class="form-group">
+                            <label>רמה</label>
+                            <select class="lang-level" onchange="autoSave()">
+                                <option value="שפת אם">שפת אם</option>
+                                <option value="רמה גבוהה מאוד" selected>רמה גבוהה מאוד</option>
+                                <option value="רמה גבוהה">רמה גבוהה</option>
+                                <option value="רמה בינונית">רמה בינונית</option>
+                                <option value="רמה בסיסית">רמה בסיסית</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="align-items:flex-end;">
+                            <button class="remove-item-btn" onclick="removeItem('languagesList', this.closest('.dynamic-item'))" title="הסר">✕</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-item-btn" onclick="addLanguage()">
+                <span>+</span> הוסף שפה
+            </button>
+        </div>
+
+        <button class="toggle-advanced" onclick="toggleAdvanced('certsAdvanced')">
+            📜 הסמכות וקורסים (אופציונלי)
+            <span id="certsAdvancedArrow">◀</span>
+        </button>
+        <div class="advanced-fields" id="certsAdvanced">
+            <div class="form-card">
+                <div class="dynamic-list" id="certsList">
+                    <div class="dynamic-item">
+                        <div class="form-grid three-cols">
+                            <div class="form-group">
+                                <label>שם ההסמכה / קורס</label>
+                                <input type="text" class="cert-name" placeholder="למשל: AWS Certified" oninput="autoSave()">
+                            </div>
+                            <div class="form-group">
+                                <label>מוסד / חברה</label>
+                                <input type="text" class="cert-issuer" placeholder="למשל: Amazon" oninput="autoSave()">
+                            </div>
+                            <div class="form-group">
+                                <label>שנה</label>
+                                <input type="number" class="cert-year" placeholder="2023" min="1990" max="2030" oninput="autoSave()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="add-item-btn" onclick="addCertification()">
+                    <span>+</span> הוסף הסמכה
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="navigateToStep(3)"><span>→</span> חזרה</button>
+            <button class="btn btn-success" onclick="buildPreviewAndShow()">
+                ✨ צור תצוגה מקדימה <span>←</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="form-view" id="step5">
+        <div class="section-header">
+            <h2>👀 תצוגה מקדימה ועריכה</h2>
+            <p>כך ייראו קורות החיים שלך — ניתן לערוך ישירות על המסמך</p>
+        </div>
+
+        <div class="suggestions-panel" id="suggestionsPanel" style="margin-bottom:20px;display:none;">
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+                💡 הצעות לשיפור
+            </h3>
+            <div id="suggestionsList"></div>
+        </div>
+
+        <div class="preview-container">
+            <div class="preview-sidebar">
+                <div class="sidebar-card">
+                    <h3>🎨 צבע מוביל</h3>
+                    <div class="color-options">
+                        <div class="color-option selected" style="background:#2563eb" onclick="changeColor('#2563eb',this)"></div>
+                        <div class="color-option" style="background:#0f172a" onclick="changeColor('#0f172a',this)"></div>
+                        <div class="color-option" style="background:#059669" onclick="changeColor('#059669',this)"></div>
+                        <div class="color-option" style="background:#7c3aed" onclick="changeColor('#7c3aed',this)"></div>
+                        <div class="color-option" style="background:#dc2626" onclick="changeColor('#dc2626',this)"></div>
+                        <div class="color-option" style="background:#0891b2" onclick="changeColor('#0891b2',this)"></div>
+                        <div class="color-option" style="background:#d97706" onclick="changeColor('#d97706',this)"></div>
+                        <div class="color-option" style="background:#be185d" onclick="changeColor('#be185d',this)"></div>
+                        <div class="color-option" style="background:#4f46e5" onclick="changeColor('#4f46e5',this)"></div>
+                        <div class="color-option" style="background:#475569" onclick="changeColor('#475569',this)"></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>📐 תבנית עיצוב</h3>
+                    <div class="template-options">
+                        <div class="template-option selected" onclick="changeTemplate('classic',this)">
+                            <div class="template-icon">📄</div>
+                            <div>
+                                <div class="template-name">קלאסי</div>
+                                <div class="template-desc">עיצוב נקי ומקצועי</div>
+                            </div>
+                        </div>
+                        <div class="template-option" onclick="changeTemplate('modern',this)">
+                            <div class="template-icon">📊</div>
+                            <div>
+                                <div class="template-name">מודרני</div>
+                                <div class="template-desc">עם סרגל צד צבעוני</div>
+                            </div>
+                        </div>
+                        <div class="template-option" onclick="changeTemplate('minimal',this)">
+                            <div class="template-icon">📃</div>
+                            <div>
+                                <div class="template-name">מינימליסטי</div>
+                                <div class="template-desc">פשוט ואלגנטי</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>🔤 גודל טקסט</h3>
+                    <div class="font-size-control">
+                        <button onclick="changeFontSize(-1)">−</button>
+                        <span id="fontSizeDisplay">100%</span>
+                        <button onclick="changeFontSize(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="edit-hint">✏️ לחץ על כל טקסט במסמך כדי לערוך אותו ישירות</div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="download-section">
+                        <button class="download-btn download-pdf" onclick="downloadPDF()">📥 הורד כ-PDF</button>
+                        <button class="btn btn-outline-primary" style="width:100%;justify-content:center;" onclick="navigateToStep(1)">
+                            ✏️ חזור לעריכה
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-preview-wrapper">
+                <div class="cv-preview" id="cvPreview"></div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Install App Banner -->
+<div class="install-banner" id="installBanner">
+    <div class="install-banner-content">
+        <div class="install-banner-icon">📲</div>
+        <div class="install-banner-text">
+            <h4>התקן כאפליקציה</h4>
+            <p>הוסף את CV Builder למסך הבית שלך לגישה מהירה — עובד גם אופליין!</p>
+        </div>
+    </div>
+    <div class="install-banner-actions">
+        <button class="install-btn-primary" id="installBtn" onclick="installApp()">התקן עכשיו</button>
+        <button class="install-btn-dismiss" onclick="dismissInstall()">לא עכשיו</button>
+    </div>
+</div>
+
+<!-- Share FAB (Mobile only) -->
+<button class="share-fab" id="shareFab" onclick="shareApp()" title="שתף">
+    📤
+</button>
+
+<!-- Mobile Bottom Nav -->
+<div class="mobile-bottom-nav" id="mobileBottomNav">
+    <button class="btn btn-secondary" id="mobilePrevBtn" onclick="mobilePrev()" style="display:none;">
+        <span>→</span> חזרה
+    </button>
+    <button class="btn btn-primary" id="mobileNextBtn" onclick="mobileNext()">
+        המשך <span>←</span>
+    </button>
+</div>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <p style="font-weight:600;color:var(--gray-800);" id="loadingText">מכין את קובץ ה-PDF...</p>
+    </div>
+</div>
+
+<script>
+    // ===== STATE =====
+    let currentStep = 1;
+    let skills = [];
+    let currentTemplate = 'classic';
+    let currentColor = '#2563eb';
+    let currentFontSize = 100;
+    let autoSaveTimer = null;
+
+    const stepNames = ['', 'פרטים אישיים', 'ניסיון תעסוקתי', 'השכלה', 'כישורים ושפות', 'תצוגה מקדימה'];
+
+    // ===== TOAST SYSTEM =====
+    function showToast(message, type = 'info', duration = 3000) {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        const icons = { success: '✅', error: '❌', info: 'ℹ️', warning: '⚠️' };
+        toast.innerHTML = `<span>${icons[type] || ''}</span> ${message}`;
+        container.appendChild(toast);
+        setTimeout(() => {
+            toast.classList.add('fadeOut');
+            setTimeout(() => toast.remove(), 350);
+        }, duration);
+    }
+
+    // ===== AUTO SAVE =====
+    function autoSave() {
+        clearTimeout(autoSaveTimer);
+        autoSaveTimer = setTimeout(() => {
+            try {
+                const data = {
+                    firstName: val('firstName'),
+                    lastName: val('lastName'),
+                    jobTitle: val('jobTitle'),
+                    phone: val('phone'),
+                    email: val('email'),
+                    city: val('city'),
+                    summary: val('summary'),
+                    linkedin: val('linkedin'),
+                    website: val('website'),
+                    github: val('github'),
+                    birthDate: val('birthDate'),
+                    skills: [...skills],
+                    militaryRole: val('militaryRole'),
+                    militaryUnit: val('militaryUnit'),
+                    militaryYears: val('militaryYears'),
+                    template: currentTemplate,
+                    color: currentColor,
+                    currentStep: currentStep
+                };
+                localStorage.setItem('cv_builder_data', JSON.stringify(data));
+
+                const indicator = document.getElementById('autoSaveIndicator');
+                indicator.style.opacity = '1';
+                setTimeout(() => { indicator.style.opacity = '0.7'; }, 1500);
+            } catch(e) { /* localStorage might be full or disabled */ }
+        }, 800);
+    }
+
+    function val(id) {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+    }
+
+    function loadSavedData() {
+        try {
+            const saved = localStorage.getItem('cv_builder_data');
+            if (!saved) return;
+            const data = JSON.parse(saved);
+
+            const fields = ['firstName','lastName','jobTitle','phone','email','city','summary','linkedin','website','github','birthDate','militaryRole','militaryUnit','militaryYears'];
+            fields.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && data[id]) el.value = data[id];
+            });
+
+            if (data.skills && data.skills.length > 0) {
+                skills = data.skills;
+                renderSkills();
+            }
+            if (data.template) currentTemplate = data.template;
+            if (data.color) currentColor = data.color;
+
+            showToast('הנתונים שלך שוחזרו בהצלחה!', 'success', 2500);
+        } catch(e) { /* ignore parse errors */ }
+    }
+
+    // ===== SPELLING =====
+    const hebrewCommonMistakes = {
+        'ניסיןו':'ניסיון','נסיון':'ניסיון','נישיון':'ניסיון',
+        'תקשורות':'תקשורת','אחראיות':'אחריות','אחריאות':'אחריות',
+        'פיתווח':'פיתוח','פתוח':'פיתוח','ניהולל':'ניהול',
+        'תיכנות':'תכנות','הנדסאת':'הנדסת','אוניברסיטאת':'אוניברסיטת',
+        'טכנולוגיאת':'טכנולוגיות','מיחשוב':'מחשוב','מחשביים':'מחשבים',
+        'שירותת':'שירות','לקוחו':'לקוחות','לקוחת':'לקוחות',
+        'אנגילת':'אנגלית','פרוייקט':'פרויקט','פרויייקט':'פרויקט',
+        'מנהלל':'מנהל','מהנדסס':'מהנדס','רפואאה':'רפואה',
+        'בגרוות':'בגרות','תיכוון':'תיכון','מכללאת':'מכללת',
+        'הצטיינוות':'הצטיינות'
+    };
+
+    function fixPunctuation(text) {
+        if (!text) return text;
+        text = text.replace(/  +/g, ' ');
+        text = text.replace(/ ([.,;:!?])/g, '$1');
+        text = text.replace(/([.,;:!?])([^\s\d\n])/g, '$1 $2');
+        text = text.replace(/\.{2,}/g, '.');
+        text = text.replace(/,{2,}/g, ',');
+        text = text.trim();
+        if (text.length > 20 && !text.match(/[.!?]$/)) text += '.';
+        return text;
+    }
+
+    function checkSpelling(element) {
+        const text = element.value;
+        const words = text.split(/\s+/);
+        const suggestions = [];
+        words.forEach(word => {
+            const cleanWord = word.replace(/[.,;:!?'"]/g, '');
+            if (hebrewCommonMistakes[cleanWord]) {
+                suggestions.push({ original: cleanWord, corrected: hebrewCommonMistakes[cleanWord] });
+            }
+        });
+        let suggEl = element.nextElementSibling;
+        while (suggEl && !suggEl.classList.contains('spelling-suggestion')) {
+            suggEl = suggEl.nextElementSibling;
+        }
+        if (suggEl && suggestions.length > 0) {
+            const s = suggestions[0];
+            suggEl.innerHTML = `💡 האם התכוונת ל: <strong>"${s.corrected}"</strong> במקום <strong>"${s.original}"</strong>? <span style="margin-right:auto;text-decoration:underline;">תקן</span>`;
+            suggEl.classList.add('visible');
+            suggEl.onclick = () => {
+                element.value = element.value.replace(s.original, s.corrected);
+                suggEl.classList.remove('visible');
+                checkSpelling(element);
+                autoSave();
+            };
+        } else if (suggEl) {
+            suggEl.classList.remove('visible');
+        }
+    }
+
+    function updateCharCount(textarea) {
+        const count = textarea.value.length;
+        const display = document.getElementById('summaryCharCount');
+        display.textContent = `${count} / 300 תווים`;
+        display.className = 'char-count';
+        if (count > 300) display.className = 'char-count error';
+        else if (count > 250) display.className = 'char-count warning';
+    }
+
+    // ===== NAVIGATION =====
+    function showStep(step) {
+        document.querySelectorAll('.form-view').forEach(v => v.classList.remove('active'));
+        const stepEl = document.getElementById('step' + step);
+        if (stepEl) stepEl.classList.add('active');
+
+        document.querySelectorAll('.progress-step').forEach(s => {
+            const sStep = parseInt(s.dataset.step);
+            s.classList.remove('active', 'completed');
+            if (sStep === step) s.classList.add('active');
+            else if (sStep < step) s.classList.add('completed');
+        });
+
+        document.querySelectorAll('.progress-connector').forEach((c, i) => {
+            c.classList.toggle('active', i < step - 1);
+        });
+
+        currentStep = step;
+
+        // Update mobile step label
+        const label = document.getElementById('mobileStepLabel');
+        if (label) label.textContent = `שלב ${step} מתוך 5 — ${stepNames[step]}`;
+
+        // Update mobile bottom nav
+        updateMobileNav();
+
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        autoSave();
+    }
+
+    function updateMobileNav() {
+        const prevBtn = document.getElementById('mobilePrevBtn');
+        const nextBtn = document.getElementById('mobileNextBtn');
+        const nav = document.getElementById('mobileBottomNav');
+
+        if (currentStep === 5) {
+            // In preview mode - show download + edit buttons
+            prevBtn.style.display = 'flex';
+            prevBtn.innerHTML = '<span>✏️</span> עריכה';
+            prevBtn.onclick = () => navigateToStep(4);
+            nextBtn.innerHTML = '<span>📥</span> הורד PDF';
+            nextBtn.className = 'btn btn-primary';
+            nextBtn.style.background = 'linear-gradient(135deg, var(--error), #dc2626)';
+            nextBtn.onclick = () => downloadPDF();
+        } else {
+            nextBtn.style.background = '';
+            nextBtn.className = 'btn btn-primary';
+
+            if (currentStep === 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.innerHTML = 'המשך <span>←</span>';
+                nextBtn.onclick = () => navigateToStep(2);
+            } else if (currentStep === 4) {
+                prevBtn.style.display = 'flex';
+                prevBtn.innerHTML = '<span>→</span> חזרה';
+                prevBtn.onclick = () => navigateToStep(3);
+                nextBtn.innerHTML = '✨ צור תצוגה מקדימה';
+                nextBtn.className = 'btn btn-success';
+                nextBtn.onclick = () => buildPreviewAndShow();
+            } else {
+                prevBtn.style.display = 'flex';
+                prevBtn.innerHTML = '<span>→</span> חזרה';
+                prevBtn.onclick = () => navigateToStep(currentStep - 1);
+                nextBtn.innerHTML = 'המשך <span>←</span>';
+                nextBtn.onclick = () => navigateToStep(currentStep + 1);
+            }
+        }
+    }
+
+    function navigateToStep(step) {
+        if (currentStep === 1 && step > 1) {
+            if (!validateStep1()) return;
+        }
+        showStep(step);
+    }
+
+    function handleStepClick(step) {
+        if (step === 5) {
+            buildPreviewAndShow();
+        } else {
+            navigateToStep(step);
+        }
+    }
+
+    function mobilePrev() {
+        if (currentStep > 1) navigateToStep(currentStep - 1);
+    }
+
+    function mobileNext() {
+        if (currentStep === 4) {
+            buildPreviewAndShow();
+        } else if (currentStep < 5) {
+            navigateToStep(currentStep + 1);
+        }
+    }
+
+    function buildPreviewAndShow() {
+        const data = gatherData();
+        const preview = document.getElementById('cvPreview');
+
+        const suggestions = generateSuggestions(data);
+        displaySuggestions(suggestions);
+
+        if (currentTemplate === 'classic') {
+            preview.innerHTML = generateClassicTemplate(data);
+        } else if (currentTemplate === 'modern') {
+            preview.innerHTML = generateModernTemplate(data);
+        } else if (currentTemplate === 'minimal') {
+            preview.innerHTML = generateMinimalTemplate(data);
+        }
+
+        preview.style.setProperty('--cv-color', currentColor);
+        preview.style.fontSize = currentFontSize + '%';
+
+        showStep(5);
+        showToast('קורות החיים מוכנים! ניתן לערוך ישירות על המסמך', 'success');
+    }
+
+    function validateStep1() {
+        const required = ['firstName','lastName','jobTitle','phone','email','city'];
+        let valid = true;
+        let firstInvalid = null;
+
+        required.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el.value.trim()) {
+                el.classList.add('error-field');
+                if (!firstInvalid) firstInvalid = el;
+                valid = false;
+                // Remove error on focus
+                el.addEventListener('focus', function handler() {
+                    el.classList.remove('error-field');
+                    el.removeEventListener('focus', handler);
+                });
+            } else {
+                el.classList.remove('error-field');
+                el.style.borderColor = '';
+                el.style.boxShadow = '';
+            }
+        });
+
+        if (!valid) {
+            showToast('נא למלא את כל שדות החובה', 'error');
+            if (firstInvalid) {
+                firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => firstInvalid.focus(), 400);
+            }
+        }
+        return valid;
+    }
+
+    function toggleAdvanced(id) {
+        const el = document.getElementById(id);
+        el.classList.toggle('visible');
+        const arrow = document.getElementById(id + 'Arrow');
+        if (arrow) arrow.textContent = el.classList.contains('visible') ? '▼' : '◀';
+    }
+
+    function toggleCurrent(checkbox) {
+        const endInput = checkbox.closest('div').querySelector('.exp-end');
+        if (endInput) {
+            endInput.disabled = checkbox.checked;
+            if (checkbox.checked) endInput.value = '';
+        }
+    }
+
+    // ===== DYNAMIC ITEMS =====
+    function addExperience() {
+        const list = document.getElementById('experienceList');
+        const count = list.children.length + 1;
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <div class="item-header">
+                <span class="item-number">משרה #${count}</span>
+                <button class="remove-item-btn" onclick="removeItem('experienceList',this)" title="הסר">✕</button>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>תפקיד <span class="required">*</span></label>
+                    <input type="text" class="exp-role" placeholder="למשל: מפתח Backend" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>חברה / מעסיק <span class="required">*</span></label>
+                    <input type="text" class="exp-company" placeholder="למשל: סטארטאפ בע״מ" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>תאריך התחלה</label>
+                    <input type="month" class="exp-start" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>תאריך סיום</label>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <input type="month" class="exp-end" style="flex:1" oninput="autoSave()">
+                        <label style="font-size:0.8rem;white-space:nowrap;margin:0;min-height:44px;display:flex;align-items:center;">
+                            <input type="checkbox" class="exp-current" onchange="toggleCurrent(this); autoSave()" style="width:18px;height:18px;margin-left:4px;"> עד היום
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>תיאור התפקיד והישגים</label>
+                    <textarea class="exp-desc" placeholder="תאר את תחומי האחריות וההישגים" rows="4" oninput="checkSpelling(this); autoSave()"></textarea>
+                    <div class="spelling-suggestion"></div>
+                </div>
+            </div>`;
+        list.appendChild(div);
+        div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        showToast('משרה חדשה נוספה', 'info', 1500);
+    }
+
+    function addEducation() {
+        const list = document.getElementById('educationList');
+        const count = list.children.length + 1;
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <div class="item-header">
+                <span class="item-number">השכלה #${count}</span>
+                <button class="remove-item-btn" onclick="removeItem('educationList',this)" title="הסר">✕</button>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>תואר / תעודה</label>
+                    <input type="text" class="edu-degree" placeholder="למשל: תואר שני" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>מוסד לימודים</label>
+                    <input type="text" class="edu-school" placeholder="למשל: האוניברסיטה העברית" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>שנת התחלה</label>
+                    <input type="number" class="edu-start" placeholder="2020" min="1970" max="2030" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>שנת סיום</label>
+                    <input type="number" class="edu-end" placeholder="2023" min="1970" max="2030" oninput="autoSave()">
+                </div>
+                <div class="form-group full-width">
+                    <label>פרטים נוספים <span class="optional">(אופציונלי)</span></label>
+                    <textarea class="edu-desc" placeholder="ממוצע, התמחות..." rows="2" oninput="autoSave()"></textarea>
+                </div>
+            </div>`;
+        list.appendChild(div);
+        div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        showToast('השכלה חדשה נוספה', 'info', 1500);
+    }
+
+    function addLanguage() {
+        const list = document.getElementById('languagesList');
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <div class="form-grid three-cols">
+                <div class="form-group">
+                    <label>שפה</label>
+                    <input type="text" class="lang-name" placeholder="למשל: צרפתית" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>רמה</label>
+                    <select class="lang-level" onchange="autoSave()">
+                        <option value="שפת אם">שפת אם</option>
+                        <option value="רמה גבוהה מאוד">רמה גבוהה מאוד</option>
+                        <option value="רמה גבוהה" selected>רמה גבוהה</option>
+                        <option value="רמה בינונית">רמה בינונית</option>
+                        <option value="רמה בסיסית">רמה בסיסית</option>
+                    </select>
+                </div>
+                <div class="form-group" style="align-items:flex-end;">
+                    <button class="remove-item-btn" onclick="removeItem('languagesList',this.closest('.dynamic-item'))" title="הסר">✕</button>
+                </div>
+            </div>`;
+        list.appendChild(div);
+    }
+
+    function addCertification() {
+        const list = document.getElementById('certsList');
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <div class="form-grid three-cols">
+                <div class="form-group">
+                    <label>שם ההסמכה</label>
+                    <input type="text" class="cert-name" placeholder="שם ההסמכה" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>מוסד</label>
+                    <input type="text" class="cert-issuer" placeholder="מוסד מנפיק" oninput="autoSave()">
+                </div>
+                <div class="form-group">
+                    <label>שנה</label>
+                    <input type="number" class="cert-year" placeholder="2023" min="1990" max="2030" oninput="autoSave()">
+                </div>
+            </div>`;
+        list.appendChild(div);
+    }
+
+    function removeItem(listId, btnOrItem) {
+        const item = btnOrItem.closest ? btnOrItem.closest('.dynamic-item') : btnOrItem;
+        const list = document.getElementById(listId);
+        if (list.children.length > 1) {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(20px)';
+            item.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+                item.remove();
+                Array.from(list.children).forEach((child, i) => {
+                    const num = child.querySelector('.item-number');
+                    if (num) {
+                        const prefix = listId === 'experienceList' ? 'משרה' : listId === 'educationList' ? 'השכלה' : '';
+                        if (prefix) num.textContent = `${prefix} #${i + 1}`;
+                    }
+                });
+                autoSave();
+            }, 300);
+        } else {
+            showToast('צריך להישאר לפחות פריט אחד', 'warning', 2000);
+        }
+    }
+
+    // ===== SKILLS =====
+    function addSkill() {
+        const input = document.getElementById('skillInput');
+        const value = input.value.trim();
+        if (value && !skills.includes(value)) {
+            skills.push(value);
+            renderSkills();
+            autoSave();
+        } else if (skills.includes(value)) {
+            showToast('הכישור כבר קיים ברשימה', 'warning', 1500);
+        }
+        input.value = '';
+        input.focus();
+    }
+
+    function addSuggestedSkill(el) {
+        const value = el.textContent.trim();
+        if (!skills.includes(value)) {
+            skills.push(value);
+            renderSkills();
+            autoSave();
+        }
+        el.style.opacity = '0';
+        el.style.transform = 'scale(0.7)';
+        setTimeout(() => { el.style.display = 'none'; }, 200);
+    }
+
+    function removeSkill(index) {
+        skills.splice(index, 1);
+        renderSkills();
+        autoSave();
+    }
+
+    function renderSkills() {
+        const container = document.getElementById('skillsTags');
+        container.innerHTML = skills.map((skill, i) =>
+            `<div class="skill-tag"><span>${skill}</span><span class="remove-skill" onclick="removeSkill(${i})">✕</span></div>`
+        ).join('');
+    }
+
+    // ===== GATHER DATA =====
+    function gatherData() {
+        const data = {
+            firstName: val('firstName'),
+            lastName: val('lastName'),
+            jobTitle: val('jobTitle'),
+            phone: val('phone'),
+            email: val('email'),
+            city: val('city'),
+            summary: fixPunctuation(val('summary')),
+            linkedin: val('linkedin'),
+            website: val('website'),
+            github: val('github'),
+            skills: [...skills],
+            experience: [],
+            education: [],
+            languages: [],
+            certifications: [],
+            military: {
+                role: val('militaryRole'),
+                unit: val('militaryUnit'),
+                years: val('militaryYears')
+            }
+        };
+
+        document.querySelectorAll('#experienceList .dynamic-item').forEach(item => {
+            const role = item.querySelector('.exp-role')?.value.trim() || '';
+            const company = item.querySelector('.exp-company')?.value.trim() || '';
+            if (role || company) {
+                const startVal = item.querySelector('.exp-start')?.value || '';
+                const endVal = item.querySelector('.exp-end')?.value || '';
+                const isCurrent = item.querySelector('.exp-current')?.checked || false;
+                data.experience.push({
+                    role, company,
+                    startDate: formatDate(startVal),
+                    endDate: isCurrent ? 'היום' : formatDate(endVal),
+                    description: fixPunctuation(item.querySelector('.exp-desc')?.value.trim() || '')
+                });
+            }
+        });
+
+        document.querySelectorAll('#educationList .dynamic-item').forEach(item => {
+            const degree = item.querySelector('.edu-degree')?.value.trim() || '';
+            const school = item.querySelector('.edu-school')?.value.trim() || '';
+            if (degree || school) {
+                data.education.push({
+                    degree, school,
+                    startYear: item.querySelector('.edu-start')?.value || '',
+                    endYear: item.querySelector('.edu-end')?.value || '',
+                    description: item.querySelector('.edu-desc')?.value.trim() || ''
+                });
+            }
+        });
+
+        document.querySelectorAll('#languagesList .dynamic-item').forEach(item => {
+            const name = item.querySelector('.lang-name')?.value.trim() || '';
+            const level = item.querySelector('.lang-level')?.value || '';
+            if (name) data.languages.push({ name, level });
+        });
+
+        document.querySelectorAll('#certsList .dynamic-item').forEach(item => {
+            const name = item.querySelector('.cert-name')?.value.trim() || '';
+            const issuer = item.querySelector('.cert-issuer')?.value.trim() || '';
+            const year = item.querySelector('.cert-year')?.value || '';
+            if (name) data.certifications.push({ name, issuer, year });
+        });
+
+        return data;
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '';
+        const [year, month] = dateStr.split('-');
+        const months = ['ינואר','פברואר','מרץ','אפריל','מאי','יוני','יולי','אוגוסט','ספטמבר','אוקטובר','נובמבר','דצמבר'];
+        return `${months[parseInt(month)-1]} ${year}`;
+    }
+
+    // ===== SUGGESTIONS =====
+    function generateSuggestions(data) {
+        const suggestions = [];
+        if (!data.summary) {
+            suggestions.push({ type:'warning', text:'מומלץ מאוד להוסיף תקציר מקצועי — זה הדבר הראשון שמגייסים קוראים.', action:'חזור לעריכה', step:1 });
+        } else if (data.summary.length < 50) {
+            suggestions.push({ type:'info', text:'התקציר המקצועי קצר. נסה להרחיב ל-2-4 משפטים שמתארים את הניסיון שלך.', action:'חזור לעריכה', step:1 });
+        }
+        if (data.experience.length === 0) {
+            suggestions.push({ type:'warning', text:'לא הוספת ניסיון תעסוקתי. גם התנדבות או פרויקטים אישיים יכולים לעזור.', action:'הוסף ניסיון', step:2 });
+        }
+        data.experience.forEach(exp => {
+            if (exp.description && exp.description.length < 30) {
+                suggestions.push({ type:'info', text:`התיאור של "${exp.role}" קצר. נסה לפרט הישגים ותחומי אחריות.` });
+            }
+            if (exp.description && !exp.description.match(/\d/)) {
+                suggestions.push({ type:'info', text:`ב-"${exp.role}" — נסה להוסיף מספרים (למשל: "ניהלתי צוות של 5 אנשים").` });
+            }
+        });
+        if (data.skills.length < 3) {
+            suggestions.push({ type:'info', text:'מומלץ להוסיף לפחות 5-8 כישורים רלוונטיים.', action:'הוסף כישורים', step:4 });
+        }
+        if (data.languages.length === 0) {
+            suggestions.push({ type:'info', text:'לא צוינו שפות. מגייסים מעוניינים לדעת באילו שפות אתה שולט.', action:'הוסף שפות', step:4 });
+        }
+        if (!data.linkedin) {
+            suggestions.push({ type:'info', text:'הוספת קישור LinkedIn יכולה לחזק את הרושם המקצועי.' });
+        }
+        return suggestions;
+    }
+
+    function displaySuggestions(suggestions) {
+        const panel = document.getElementById('suggestionsPanel');
+        const list = document.getElementById('suggestionsList');
+        if (suggestions.length === 0) { panel.style.display = 'none'; return; }
+        panel.style.display = 'block';
+        list.innerHTML = suggestions.map((s, i) => `
+            <div class="suggestion-item ${s.type}">
+                <span class="suggestion-icon">${s.type==='warning'?'⚠️':'💡'}</span>
+                <span class="suggestion-text">${s.text}</span>
+                ${s.action ? `<button class="apply-suggestion" data-index="${i}">${s.action}</button>` : ''}
+            </div>
+        `).join('');
+        list.querySelectorAll('.apply-suggestion').forEach(btn => {
+            const idx = parseInt(btn.dataset.index);
+            const s = suggestions[idx];
+            if (s.step) {
+                btn.addEventListener('click', () => navigateToStep(s.step));
+            }
+        });
+    }
+
+    // ===== TEMPLATES =====
+    function formatDescription(text) {
+        if (!text) return '';
+        const lines = text.split(/\n/).filter(l => l.trim());
+        if (lines.length > 1) return lines.map(l => '• ' + l.trim()).join('<br>');
+        return text;
+    }
+
+    function generateClassicTemplate(data) {
+        let html = `<div class="cv-content template-classic">`;
+        html += `<div class="cv-header-section">
+            <div class="cv-name" contenteditable="true">${data.firstName} ${data.lastName}</div>
+            <div class="cv-title" contenteditable="true">${data.jobTitle}</div>
+            <div class="cv-contact-row">`;
+        if (data.phone) html += `<div class="cv-contact-item">📱 <span contenteditable="true">${data.phone}</span></div>`;
+        if (data.email) html += `<div class="cv-contact-item">✉️ <span contenteditable="true" dir="ltr">${data.email}</span></div>`;
+        if (data.city) html += `<div class="cv-contact-item">📍 <span contenteditable="true">${data.city}</span></div>`;
+        if (data.linkedin) html += `<div class="cv-contact-item">🔗 <span contenteditable="true" dir="ltr">${data.linkedin}</span></div>`;
+        if (data.website) html += `<div class="cv-contact-item">🌐 <span contenteditable="true" dir="ltr">${data.website}</span></div>`;
+        if (data.github) html += `<div class="cv-contact-item">💻 <span contenteditable="true" dir="ltr">${data.github}</span></div>`;
+        html += `</div></div><div class="cv-body-section">`;
+
+        if (data.summary) {
+            html += `<div class="cv-section"><div class="cv-section-title">תקציר מקצועי</div>
+                <div class="cv-entry-desc" contenteditable="true" style="font-size:12.5px;">${data.summary}</div></div>`;
+        }
+        if (data.experience.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">ניסיון תעסוקתי</div>`;
+            data.experience.forEach(exp => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${exp.role}</div>
+                    <div class="cv-entry-subtitle" contenteditable="true">${exp.company}</div></div>
+                    <div class="cv-entry-date" contenteditable="true">${exp.startDate}${exp.startDate&&exp.endDate?' - ':''}${exp.endDate}</div></div>`;
+                if (exp.description) html += `<div class="cv-entry-desc" contenteditable="true">${formatDescription(exp.description)}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.education.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">השכלה</div>`;
+            data.education.forEach(edu => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${edu.degree}</div>
+                    <div class="cv-entry-subtitle" contenteditable="true">${edu.school}</div></div>
+                    <div class="cv-entry-date" contenteditable="true">${edu.startYear}${edu.startYear&&edu.endYear?' - ':''}${edu.endYear}</div></div>`;
+                if (edu.description) html += `<div class="cv-entry-desc" contenteditable="true">${edu.description}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.military.role) {
+            html += `<div class="cv-section"><div class="cv-section-title">שירות צבאי / לאומי</div>
+                <div class="cv-entry"><div class="cv-entry-header"><div>
+                <div class="cv-entry-title" contenteditable="true">${data.military.role}</div>
+                <div class="cv-entry-subtitle" contenteditable="true">${data.military.unit}</div></div>
+                <div class="cv-entry-date" contenteditable="true">${data.military.years}</div></div></div></div>`;
+        }
+        if (data.certifications.length > 0 && data.certifications[0].name) {
+            html += `<div class="cv-section"><div class="cv-section-title">הסמכות וקורסים</div>`;
+            data.certifications.forEach(cert => {
+                if (cert.name) {
+                    html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                        <div class="cv-entry-title" contenteditable="true">${cert.name}</div>
+                        <div class="cv-entry-subtitle" contenteditable="true">${cert.issuer}</div></div>
+                        <div class="cv-entry-date" contenteditable="true">${cert.year}</div></div></div>`;
+                }
+            });
+            html += `</div>`;
+        }
+        if (data.skills.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">כישורים</div><div class="cv-skills-list">`;
+            data.skills.forEach(s => { html += `<div class="cv-skill-item" contenteditable="true">${s}</div>`; });
+            html += `</div></div>`;
+        }
+        if (data.languages.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">שפות</div><div class="cv-skills-list">`;
+            data.languages.forEach(l => { html += `<div class="cv-skill-item" contenteditable="true">${l.name} — ${l.level}</div>`; });
+            html += `</div></div>`;
+        }
+        html += `</div></div>`;
+        return html;
+    }
+
+    function generateModernTemplate(data) {
+        let html = `<div class="cv-content template-modern">`;
+        html += `<div class="cv-sidebar" style="background:${currentColor}">
+            <div class="cv-name" contenteditable="true">${data.firstName} ${data.lastName}</div>
+            <div class="cv-title" contenteditable="true">${data.jobTitle}</div>`;
+
+        html += `<div class="sidebar-section"><div class="sidebar-section-title">פרטי קשר</div>`;
+        if (data.phone) html += `<div class="sidebar-item">📱 <span contenteditable="true">${data.phone}</span></div>`;
+        if (data.email) html += `<div class="sidebar-item">✉️ <span contenteditable="true" dir="ltr" style="word-break:break-all;">${data.email}</span></div>`;
+        if (data.city) html += `<div class="sidebar-item">📍 <span contenteditable="true">${data.city}</span></div>`;
+        if (data.linkedin) html += `<div class="sidebar-item">🔗 <span contenteditable="true" dir="ltr" style="word-break:break-all;">${data.linkedin}</span></div>`;
+        if (data.website) html += `<div class="sidebar-item">🌐 <span contenteditable="true" dir="ltr" style="word-break:break-all;">${data.website}</span></div>`;
+        html += `</div>`;
+
+        if (data.skills.length > 0) {
+            html += `<div class="sidebar-section"><div class="sidebar-section-title">כישורים</div><div>`;
+            data.skills.forEach(s => { html += `<span class="cv-skill-item" contenteditable="true">${s}</span>`; });
+            html += `</div></div>`;
+        }
+        if (data.languages.length > 0) {
+            html += `<div class="sidebar-section"><div class="sidebar-section-title">שפות</div>`;
+            data.languages.forEach(l => { html += `<div class="sidebar-item" contenteditable="true">${l.name} — ${l.level}</div>`; });
+            html += `</div>`;
+        }
+        html += `</div><div class="cv-main">`;
+
+        if (data.summary) {
+            html += `<div class="cv-section"><div class="cv-section-title">תקציר מקצועי</div>
+                <div class="cv-entry-desc" contenteditable="true">${data.summary}</div></div>`;
+        }
+        if (data.experience.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">ניסיון תעסוקתי</div>`;
+            data.experience.forEach(exp => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${exp.role}</div>
+                    <div class="cv-entry-subtitle" contenteditable="true">${exp.company}</div></div>
+                    <div class="cv-entry-date" contenteditable="true">${exp.startDate}${exp.startDate&&exp.endDate?' - ':''}${exp.endDate}</div></div>`;
+                if (exp.description) html += `<div class="cv-entry-desc" contenteditable="true">${formatDescription(exp.description)}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.education.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">השכלה</div>`;
+            data.education.forEach(edu => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${edu.degree}</div>
+                    <div class="cv-entry-subtitle" contenteditable="true">${edu.school}</div></div>
+                    <div class="cv-entry-date" contenteditable="true">${edu.startYear}${edu.startYear&&edu.endYear?' - ':''}${edu.endYear}</div></div>`;
+                if (edu.description) html += `<div class="cv-entry-desc" contenteditable="true">${edu.description}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.military.role) {
+            html += `<div class="cv-section"><div class="cv-section-title">שירות צבאי / לאומי</div>
+                <div class="cv-entry"><div class="cv-entry-header"><div>
+                <div class="cv-entry-title" contenteditable="true">${data.military.role}</div>
+                <div class="cv-entry-subtitle" contenteditable="true">${data.military.unit}</div></div>
+                <div class="cv-entry-date" contenteditable="true">${data.military.years}</div></div></div></div>`;
+        }
+        if (data.certifications.length > 0 && data.certifications[0].name) {
+            html += `<div class="cv-section"><div class="cv-section-title">הסמכות</div>`;
+            data.certifications.forEach(cert => {
+                if (cert.name) {
+                    html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                        <div class="cv-entry-title" contenteditable="true">${cert.name}</div>
+                        <div class="cv-entry-subtitle" contenteditable="true">${cert.issuer}</div></div>
+                        <div class="cv-entry-date" contenteditable="true">${cert.year}</div></div></div>`;
+                }
+            });
+            html += `</div>`;
+        }
+        html += `</div></div>`;
+        return html;
+    }
+
+    function generateMinimalTemplate(data) {
+        let html = `<div class="cv-content template-minimal">`;
+        html += `<div class="cv-header-section">
+            <div class="cv-name" contenteditable="true">${data.firstName} ${data.lastName}</div>
+            <div class="cv-title" contenteditable="true">${data.jobTitle}</div>
+            <div class="cv-contact-row">`;
+        const items = [];
+        if (data.phone) items.push(`<span contenteditable="true">${data.phone}</span>`);
+        if (data.email) items.push(`<span contenteditable="true" dir="ltr">${data.email}</span>`);
+        if (data.city) items.push(`<span contenteditable="true">${data.city}</span>`);
+        if (data.linkedin) items.push(`<span contenteditable="true" dir="ltr">${data.linkedin}</span>`);
+        html += items.join(' · ');
+        html += `</div><div class="cv-divider"></div></div><div class="cv-body-section">`;
+
+        if (data.summary) {
+            html += `<div class="cv-section"><div class="cv-section-title">תקציר</div>
+                <div class="cv-entry-desc" contenteditable="true" style="text-align:center;">${data.summary}</div></div>`;
+        }
+        if (data.experience.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">ניסיון</div>`;
+            data.experience.forEach(exp => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${exp.role} | <span style="font-weight:400">${exp.company}</span></div></div>
+                    <div class="cv-entry-date" contenteditable="true">${exp.startDate}${exp.startDate&&exp.endDate?' - ':''}${exp.endDate}</div></div>`;
+                if (exp.description) html += `<div class="cv-entry-desc" contenteditable="true">${formatDescription(exp.description)}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.education.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">השכלה</div>`;
+            data.education.forEach(edu => {
+                html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                    <div class="cv-entry-title" contenteditable="true">${edu.degree}</div>
+                    <div class="cv-entry-subtitle" contenteditable="true">${edu.school}</div></div>
+                    <div class="cv-entry-date" contenteditable="true">${edu.startYear}${edu.startYear&&edu.endYear?' - ':''}${edu.endYear}</div></div>`;
+                if (edu.description) html += `<div class="cv-entry-desc" contenteditable="true">${edu.description}</div>`;
+                html += `</div>`;
+            });
+            html += `</div>`;
+        }
+        if (data.military.role) {
+            html += `<div class="cv-section"><div class="cv-section-title">שירות</div>
+                <div class="cv-entry"><div class="cv-entry-header"><div>
+                <div class="cv-entry-title" contenteditable="true">${data.military.role} | ${data.military.unit}</div></div>
+                <div class="cv-entry-date" contenteditable="true">${data.military.years}</div></div></div></div>`;
+        }
+        if (data.certifications.length > 0 && data.certifications[0].name) {
+            html += `<div class="cv-section"><div class="cv-section-title">הסמכות</div>`;
+            data.certifications.forEach(cert => {
+                if (cert.name) {
+                    html += `<div class="cv-entry"><div class="cv-entry-header"><div>
+                        <div class="cv-entry-title" contenteditable="true">${cert.name} — ${cert.issuer}</div></div>
+                        <div class="cv-entry-date" contenteditable="true">${cert.year}</div></div></div>`;
+                }
+            });
+            html += `</div>`;
+        }
+        if (data.skills.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">כישורים</div><div class="cv-skills-list">`;
+            data.skills.forEach(s => { html += `<div class="cv-skill-item" contenteditable="true">${s}</div>`; });
+            html += `</div></div>`;
+        }
+        if (data.languages.length > 0) {
+            html += `<div class="cv-section"><div class="cv-section-title">שפות</div><div class="cv-skills-list">`;
+            data.languages.forEach(l => { html += `<div class="cv-skill-item" contenteditable="true">${l.name} — ${l.level}</div>`; });
+            html += `</div></div>`;
+        }
+        html += `</div></div>`;
+        return html;
+    }
+
+    // ===== CONTROLS =====
+    function changeColor(color, el) {
+        currentColor = color;
+        document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
+        el.classList.add('selected');
+        const preview = document.getElementById('cvPreview');
+        preview.style.setProperty('--cv-color', color);
+        const sidebar = preview.querySelector('.cv-sidebar');
+        if (sidebar) sidebar.style.background = color;
+        autoSave();
+    }
+
+    function changeTemplate(template, el) {
+        currentTemplate = template;
+        document.querySelectorAll('.template-option').forEach(o => o.classList.remove('selected'));
+        el.classList.add('selected');
+        const data = gatherData();
+        const preview = document.getElementById('cvPreview');
+        if (currentTemplate === 'classic') preview.innerHTML = generateClassicTemplate(data);
+        else if (currentTemplate === 'modern') preview.innerHTML = generateModernTemplate(data);
+        else if (currentTemplate === 'minimal') preview.innerHTML = generateMinimalTemplate(data);
+        preview.style.setProperty('--cv-color', currentColor);
+        preview.style.fontSize = currentFontSize + '%';
+        autoSave();
+    }
+
+    function changeFontSize(delta) {
+        currentFontSize = Math.max(80, Math.min(120, currentFontSize + delta * 5));
+        document.getElementById('fontSizeDisplay').textContent = currentFontSize + '%';
+        document.getElementById('cvPreview').style.fontSize = currentFontSize + '%';
+    }
+
+    // ===== PDF =====
+    async function downloadPDF() {
+        // Check if html2pdf is available
+        if (typeof html2pdf === 'undefined') {
+            showToast('ספריית PDF לא נטענה. בדוק חיבור אינטרנט ורענן.', 'error', 5000);
+            return;
+        }
+
+        const loading = document.getElementById('loadingOverlay');
+        loading.classList.add('active');
+        const element = document.getElementById('cvPreview');
+
+        const editables = element.querySelectorAll('[contenteditable]');
+        editables.forEach(el => el.setAttribute('contenteditable', 'false'));
+
+        const data = gatherData();
+        const filename = `CV_${data.firstName}_${data.lastName}.pdf`;
+
+        // Detect mobile for adjusted settings
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        try {
+            const opt = {
+                margin: 0,
+                filename: filename,
+                image: { type: 'jpeg', quality: isMobile ? 0.92 : 0.98 },
+                html2canvas: {
+                    scale: isMobile ? 1.5 : 2,
+                    useCORS: true,
+                    letterRendering: true,
+                    scrollY: 0,
+                    windowWidth: element.scrollWidth,
+                    logging: false
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // On iOS Safari, use blob output and open in new tab
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            
+            if (isIOS) {
+                const pdf = await html2pdf().set(opt).from(element).outputPdf('blob');
+                const blobUrl = URL.createObjectURL(pdf);
+                window.open(blobUrl, '_blank');
+                showToast('ה-PDF נפתח בחלון חדש. שמור אותו משם!', 'success', 4000);
+            } else {
+                await html2pdf().set(opt).from(element).save();
+                showToast('ה-PDF הורד בהצלחה!', 'success');
+            }
+        } catch (error) {
+            console.error('PDF error:', error);
+            showToast('שגיאה ביצירת ה-PDF. נסה שוב.', 'error');
+            
+            // Fallback: try print dialog
+            try {
+                const printWindow = window.open('', '_blank');
+                if (printWindow) {
+                    printWindow.document.write('<html dir="rtl"><head><title>קורות חיים</title>');
+                    printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">');
+                    printWindow.document.write('<style>body{font-family:"Heebo",sans-serif;direction:rtl;margin:0;padding:20px;}@media print{@page{margin:0;}}</style></head><body>');
+                    printWindow.document.write(element.innerHTML);
+                    printWindow.document.write('</body></html>');
+                    printWindow.document.close();
+                    setTimeout(() => { printWindow.print(); }, 500);
+                    showToast('נפתח חלון הדפסה — בחר "שמור כ-PDF"', 'info', 5000);
+                }
+            } catch(e2) {
+                showToast('לא ניתן ליצור PDF. נסה מדפדפן אחר.', 'error', 5000);
+            }
+        }
+
+        editables.forEach(el => el.setAttribute('contenteditable', 'true'));
+        loading.classList.remove('active');
+    }
+
+    // ===== KEYBOARD SHORTCUTS =====
+    document.addEventListener('keydown', (e) => {
+        // Ctrl+S to save (prevent default, auto-save runs)
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            autoSave();
+            showToast('נשמר!', 'success', 1500);
+        }
+    });
+
+    // ===== SWIPE SUPPORT =====
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+        if (currentStep === 5) return; // Don't swipe in preview
+
+        // Ignore very slow swipes (> 400ms)
+        if (Date.now() - touchStartTime > 400) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+
+        // Only horizontal swipe (larger than vertical, minimum 60px)
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 60) {
+            // Check if we're inside an input/textarea/select or scrollable container
+            const target = e.target;
+            if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') return;
+            if (target.closest('.cv-preview-wrapper') || target.closest('[contenteditable]')) return;
+
+            if (diffX > 0 && currentStep < 5) {
+                // Swipe left (next in RTL)
+                if (currentStep === 4) buildPreviewAndShow();
+                else navigateToStep(currentStep + 1);
+            } else if (diffX < 0 && currentStep > 1) {
+                // Swipe right (prev in RTL)
+                navigateToStep(currentStep - 1);
+            }
+        }
+    }, { passive: true });
+
+    // ===== HANDLE iOS 100vh BUG =====
+    function setVHProperty() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setVHProperty();
+    window.addEventListener('resize', setVHProperty);
+
+    // ===== HANDLE VISIBILITY CHANGE (auto-save when leaving) =====
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            // Force immediate save when user leaves/switches tabs
+            clearTimeout(autoSaveTimer);
+            try {
+                const data = {
+                    firstName: val('firstName'), lastName: val('lastName'),
+                    jobTitle: val('jobTitle'), phone: val('phone'),
+                    email: val('email'), city: val('city'),
+                    summary: val('summary'), linkedin: val('linkedin'),
+                    website: val('website'), github: val('github'),
+                    birthDate: val('birthDate'), skills: [...skills],
+                    militaryRole: val('militaryRole'), militaryUnit: val('militaryUnit'),
+                    militaryYears: val('militaryYears'),
+                    template: currentTemplate, color: currentColor, currentStep: currentStep
+                };
+                localStorage.setItem('cv_builder_data', JSON.stringify(data));
+            } catch(e) {}
+        }
+    });
+
+    // ===== SHARE APP =====
+    async function shareApp() {
+        const shareData = {
+            title: 'CV Builder Pro — מחולל קורות חיים מקצועי',
+            text: 'בנה קורות חיים מקצועיים בעברית תוך דקות! 3 תבניות עיצוב, ייצוא PDF, חינם.',
+            url: window.location.href
+        };
+
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+                showToast('תודה על השיתוף! 🎉', 'success');
+            } else {
+                // Fallback: copy URL to clipboard
+                await navigator.clipboard.writeText(window.location.href);
+                showToast('הקישור הועתק! שלח אותו לחברים 📋', 'success', 3000);
+            }
+        } catch (err) {
+            if (err.name !== 'AbortError') {
+                // Final fallback: prompt
+                try {
+                    await navigator.clipboard.writeText(window.location.href);
+                    showToast('הקישור הועתק! 📋', 'success');
+                } catch {
+                    // Manual fallback
+                    const input = document.createElement('input');
+                    input.value = window.location.href;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    showToast('הקישור הועתק! 📋', 'success');
+                }
+            }
+        }
+    }
+
+    // ===== PWA INSTALL =====
+    let deferredPrompt = null;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // Show install banner after 15 seconds if not dismissed before
+        const dismissed = localStorage.getItem('cv_install_dismissed');
+        if (!dismissed) {
+            setTimeout(() => {
+                document.getElementById('installBanner').classList.add('visible');
+            }, 15000);
+        }
+    });
+
+    function installApp() {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(result => {
+                if (result.outcome === 'accepted') {
+                    showToast('האפליקציה הותקנה בהצלחה! 🎉', 'success', 4000);
+                }
+                deferredPrompt = null;
+                document.getElementById('installBanner').classList.remove('visible');
+            });
+        } else {
+            // iOS - show instructions
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (isIOS) {
+                showToast('לחץ על כפתור השיתוף (📤) בסרגל הדפדפן ← "הוסף למסך הבית"', 'info', 6000);
+            } else {
+                showToast('פתח את התפריט של הדפדפן ← "הוסף למסך הבית"', 'info', 5000);
+            }
+            document.getElementById('installBanner').classList.remove('visible');
+        }
+    }
+
+    function dismissInstall() {
+        document.getElementById('installBanner').classList.remove('visible');
+        localStorage.setItem('cv_install_dismissed', 'true');
+    }
+
+    // Show iOS install hint if standalone not detected
+    window.addEventListener('load', () => {
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+        
+        if (isIOS && !isStandalone && !localStorage.getItem('cv_install_dismissed')) {
+            setTimeout(() => {
+                document.getElementById('installBanner').classList.add('visible');
+                // Customize text for iOS
+                document.querySelector('#installBanner .install-banner-text p').textContent = 
+                    'לחץ על 📤 בסרגל למטה ← "הוסף למסך הבית" לגישה מהירה כאפליקציה!';
+                document.getElementById('installBtn').textContent = 'הבנתי 👍';
+                document.getElementById('installBtn').onclick = () => {
+                    showToast('לחץ על 📤 בסרגל Safari למטה ← "הוסף למסך הבית"', 'info', 6000);
+                    dismissInstall();
+                };
+            }, 20000);
+        }
+    });
+
+    // ===== MOBILE KEYBOARD HANDLING =====
+    (function() {
+        let initialViewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        const mobileNav = document.getElementById('mobileBottomNav');
+        const shareFab = document.getElementById('shareFab');
+
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', () => {
+                const currentHeight = window.visualViewport.height;
+                const keyboardOpen = currentHeight < initialViewportHeight * 0.75;
+                
+                if (mobileNav) {
+                    mobileNav.style.display = keyboardOpen ? 'none' : '';
+                    // Re-apply flex after keyboard closes
+                    if (!keyboardOpen && window.innerWidth <= 768) {
+                        setTimeout(() => { mobileNav.style.display = 'flex'; }, 100);
+                    }
+                }
+                if (shareFab) {
+                    shareFab.style.display = keyboardOpen ? 'none' : '';
+                }
+            });
+        } else {
+            // Fallback for browsers without visualViewport
+            window.addEventListener('resize', () => {
+                const keyboardOpen = window.innerHeight < initialViewportHeight * 0.75;
+                if (mobileNav) {
+                    mobileNav.style.display = keyboardOpen ? 'none' : '';
+                }
+                if (shareFab) {
+                    shareFab.style.display = keyboardOpen ? 'none' : '';
+                }
+            });
+        }
+    })();
+
+    // ===== SERVICE WORKER (Inline for offline support) =====
+    if ('serviceWorker' in navigator) {
+        const swCode = `
+            const CACHE_NAME = 'cv-builder-v2.2';
+            const ASSETS = [self.location.href];
+            
+            self.addEventListener('install', e => {
+                e.waitUntil(
+                    caches.open(CACHE_NAME).then(cache => {
+                        return cache.addAll(ASSETS).catch(() => {});
+                    })
+                );
+                self.skipWaiting();
+            });
+            
+            self.addEventListener('activate', e => {
+                e.waitUntil(
+                    caches.keys().then(keys => 
+                        Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+                    )
+                );
+                self.clients.claim();
+            });
+            
+            self.addEventListener('fetch', e => {
+                // Network first, cache fallback
+                e.respondWith(
+                    fetch(e.request).then(response => {
+                        const clone = response.clone();
+                        caches.open(CACHE_NAME).then(cache => {
+                            cache.put(e.request, clone);
+                        });
+                        return response;
+                    }).catch(() => {
+                        return caches.match(e.request);
+                    })
+                );
+            });
+        `;
+        
+        try {
+            const swBlob = new Blob([swCode], { type: 'application/javascript' });
+            const swUrl = URL.createObjectURL(swBlob);
+            navigator.serviceWorker.register(swUrl, { scope: '/' }).then(reg => {
+                console.log('✅ Service Worker registered');
+            }).catch(err => {
+                // Service worker registration may fail for file:// or cross-origin
+                // This is fine — the app still works, just without offline caching
+                console.log('ℹ️ SW not available (offline caching disabled):', err.message);
+            });
+        } catch(e) {
+            console.log('ℹ️ Service Worker not supported in this context');
+        }
+    }
+
+    // ===== INIT =====
+    document.addEventListener('DOMContentLoaded', () => {
+        loadSavedData();
+        updateMobileNav();
+
+        // Fix iOS input focus scrolling
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+            document.querySelectorAll('input, textarea, select').forEach(el => {
+                el.addEventListener('focus', () => {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                });
+            });
+        }
+
+        const jobTitleInput = document.getElementById('jobTitle');
+        jobTitleInput.addEventListener('input', () => {
+            const title = jobTitleInput.value.toLowerCase();
+            const suggestionsContainer = document.getElementById('skillSuggestions');
+            const techKeywords = ['מפתח','developer','תוכנה','פיתוח','מתכנת','full stack','frontend','backend'];
+            const designKeywords = ['מעצב','designer','עיצוב','גרפי','ux','ui'];
+            const marketingKeywords = ['שיווק','marketing','דיגיטל','תוכן','סושיאל'];
+            const pmKeywords = ['מנהל פרויקט','project manager','pm','ניהול','מנהל מוצר','product'];
+            const dataKeywords = ['data','נתונים','אנליסט','analyst','מדען נתונים'];
+
+            if (techKeywords.some(k => title.includes(k))) {
+                suggestionsContainer.innerHTML = ['JavaScript','React','Node.js','Python','SQL','Git','HTML/CSS','TypeScript','REST API','Docker','AWS','MongoDB']
+                    .map(s => `<span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">${s}</span>`).join('');
+            } else if (designKeywords.some(k => title.includes(k))) {
+                suggestionsContainer.innerHTML = ['Figma','Photoshop','Illustrator','After Effects','UI/UX Design','Wireframing','Typography','Sketch','InVision']
+                    .map(s => `<span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">${s}</span>`).join('');
+            } else if (marketingKeywords.some(k => title.includes(k))) {
+                suggestionsContainer.innerHTML = ['Google Analytics','Google Ads','Facebook Ads','SEO','Content Writing','Email Marketing','CRM','HubSpot','Social Media']
+                    .map(s => `<span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">${s}</span>`).join('');
+            } else if (pmKeywords.some(k => title.includes(k))) {
+                suggestionsContainer.innerHTML = ['Jira','Monday.com','Agile','Scrum','ניהול צוות','תכנון אסטרטגי','ניתוח דרישות','Confluence','Trello']
+                    .map(s => `<span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">${s}</span>`).join('');
+            } else if (dataKeywords.some(k => title.includes(k))) {
+                suggestionsContainer.innerHTML = ['Python','SQL','Tableau','Power BI','Excel','R','Machine Learning','Statistics','Pandas','Spark']
+                    .map(s => `<span class="skill-suggestion-chip" onclick="addSuggestedSkill(this)">${s}</span>`).join('');
+            }
+        });
+
+        console.log('✅ CV Builder Pro v2.2 loaded — PWA Mobile Ready!');
+    });
+</script>
+
+</body>
+</html>
